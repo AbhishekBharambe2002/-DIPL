@@ -3,7 +3,7 @@ import { Material } from "../server/models/material";
 import { ProjectSiteLog } from "../server/models/project-site-log";
 import { InventoryLog } from "../server/models/inventory-log";
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://abhishekautowhat11_db_user:KaV0OyXkYQRqvsG5@cluster0.j4m8qrf.mongodb.net/";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://abhishekautowhat11_db_user:KaV0OyXkYQRqvsG5@cluster0.j4m8qrf.mongodb.net/firesafe";
 
 function rand(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min;

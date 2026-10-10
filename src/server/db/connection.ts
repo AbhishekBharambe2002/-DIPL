@@ -27,7 +27,7 @@ import "@/server/models/inventory-log";
 import "@/server/models/project-site-log";
 import "@/server/models/primary-order";
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://abhishekautowhat11_db_user:KaV0OyXkYQRqvsG5@cluster0.j4m8qrf.mongodb.net/";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://abhishekautowhat11_db_user:KaV0OyXkYQRqvsG5@cluster0.j4m8qrf.mongodb.net/firesafe";
 
 interface MongooseCache {
   conn: typeof mongoose | null;

@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { InventoryLog } from "../server/models/inventory-log";
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://abhishekautowhat11_db_user:KaV0OyXkYQRqvsG5@cluster0.j4m8qrf.mongodb.net/";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://abhishekautowhat11_db_user:KaV0OyXkYQRqvsG5@cluster0.j4m8qrf.mongodb.net/firesafe";
 
 /**
  * One-time migration: add `quantityToDispatch` to every inventory_logs doc,
