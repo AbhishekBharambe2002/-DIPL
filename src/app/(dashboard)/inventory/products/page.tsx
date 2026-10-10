@@ -1,246 +1,239 @@
 "use client";
 
-import { useState } from "react";
-import { Boxes, Plus, Search } from "lucide-react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { clsx } from "clsx";
+import { Search } from "lucide-react";
 import { PageHeader } from "@/components/ui/page-header";
-import { Button } from "@/components/ui/button";
+import { KpiCard } from "@/components/ui/kpi-card";
 import { DataTable, type Column } from "@/components/ui/data-table";
-import { Modal } from "@/components/ui/modal";
-import { FormInput, FormSelect, FormTextarea } from "@/components/ui/form-field";
-import { useFetch, apiPost, apiPatch } from "@/hooks/use-api";
+import { Chip } from "@/components/ui/status-badge";
+import { apiFetch, useFetch } from "@/hooks/use-api";
+import { inr, inrShort, qty, shortDate } from "@/lib/format";
+import { PendingDeliveriesBell } from "@/components/inventory/pending-deliveries-bell";
 
-interface Product {
+/* ── types ── */
+interface Material {
   _id: string;
-  sku: string;
+  productId: string;
   name: string;
-  category?: string;
-  brand?: string;
-  modelNumber?: string;
-  description?: string;
+  category: string;
+  subCategory?: string;
+  make?: string;
+  modelNo?: string;
   unit: string;
+  size?: string;
+  specs?: Record<string, string | number>;
+  sheet: string;
+  srNo?: number;
+  /* enriched from inventory_logs */
+  quantity: number;
   purchasePrice: number;
-  sellingPrice: number;
-  minimumStock: number;
-  maximumStock?: number;
-  reorderLevel?: number;
-  serialTracking?: boolean;
-  batchTracking?: boolean;
-  warrantyPeriod?: number;
-  createdAt: string;
+  totalValue: number;
+  addedAt: string | null;
 }
 
-const emptyForm = {
-  sku: "",
-  name: "",
-  category: "",
-  brand: "",
-  modelNumber: "",
-  description: "",
-  unit: "Nos",
-  purchasePrice: "",
-  sellingPrice: "",
-  minimumStock: "",
-  maximumStock: "",
-  reorderLevel: "",
-  serialTracking: false,
-  batchTracking: false,
-  warrantyPeriod: "",
+interface Summary {
+  total: number;
+  sheets: string[];
+  categories: string[];
+  stockValue: number;
+  stockQty: number;
+}
+
+/* ── short display labels for each sheet tab ── */
+const TAB_LABELS: Record<string, string> = {
+  "M.S Reducer & Elbow & Flange": "MS Reducer / Elbow / Flange",
+  "HARDWARE FITTING": "Hardware Fitting",
+  "Fire Alarm Panel": "Fire Alarm Panel",
+  "4 way": "4 Way & Hydrant",
+  VALVES: "Valves",
+  "Extinguisher Fire": "Extinguisher",
+  "Hose Reel & Box": "Hose Reel & Box",
+  "Control Panel & Pump": "Control Panel & Pump",
+  NewAge: "NewAge",
+  "PVC Material": "PVC Material",
+  PAINT: "Paint",
+  "CABLE": "Cable",
 };
 
-export default function ProductsPage() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [editId, setEditId] = useState<string | null>(null);
-  const [form, setForm] = useState(emptyForm);
-  const [saving, setSaving] = useState(false);
+/* ── page ── */
+export default function MaterialCataloguePage() {
+  const [summary, setSummary] = useState<Summary | null>(null);
+  const [sheet, setSheet] = useState("");
   const [searchInput, setSearchInput] = useState("");
-  const { data, loading, page, pages, total, setPage, setSearch, refetch } =
-    useFetch<Product>("/api/products");
 
-  const set = (field: string, value: string | boolean) =>
-    setForm((f) => ({ ...f, [field]: value }));
+  const extra = useMemo(() => {
+    const p: Record<string, string> = { sort: "productId", limit: "50" };
+    if (sheet) p.sheet = sheet;
+    return p;
+  }, [sheet]);
 
-  function openCreate() {
-    setForm(emptyForm);
-    setEditId(null);
-    setModalOpen(true);
-  }
+  const { data, loading, page, pages, total, setPage, setSearch } =
+    useFetch<Material>("/api/materials", extra);
 
-  function openEdit(p: Product) {
-    setForm({
-      sku: p.sku,
-      name: p.name,
-      category: p.category || "",
-      brand: p.brand || "",
-      modelNumber: p.modelNumber || "",
-      description: p.description || "",
-      unit: p.unit || "Nos",
-      purchasePrice: String(p.purchasePrice ?? ""),
-      sellingPrice: String(p.sellingPrice ?? ""),
-      minimumStock: String(p.minimumStock ?? ""),
-      maximumStock: String(p.maximumStock ?? ""),
-      reorderLevel: String(p.reorderLevel ?? ""),
-      serialTracking: p.serialTracking || false,
-      batchTracking: p.batchTracking || false,
-      warrantyPeriod: String(p.warrantyPeriod ?? ""),
+  const loadSummary = useCallback(() => {
+    apiFetch("/api/materials?summary=true").then((j) => {
+      if (j.success) setSummary(j.data);
     });
-    setEditId(p._id);
-    setModalOpen(true);
-  }
+  }, []);
 
-  async function handleSave() {
-    if (!form.sku || !form.name || !form.unit) return;
-    setSaving(true);
-    try {
-      const payload = {
-        ...form,
-        purchasePrice: form.purchasePrice ? Number(form.purchasePrice) : 0,
-        sellingPrice: form.sellingPrice ? Number(form.sellingPrice) : 0,
-        minimumStock: form.minimumStock ? Number(form.minimumStock) : 0,
-        maximumStock: form.maximumStock ? Number(form.maximumStock) : 0,
-        reorderLevel: form.reorderLevel ? Number(form.reorderLevel) : 0,
-        warrantyPeriod: form.warrantyPeriod ? Number(form.warrantyPeriod) : 0,
-      };
-      if (editId) {
-        await apiPatch(`/api/products/${editId}`, payload);
-      } else {
-        await apiPost("/api/products", payload);
-      }
-      setModalOpen(false);
-      refetch();
-    } finally {
-      setSaving(false);
-    }
-  }
+  useEffect(() => { loadSummary(); }, [loadSummary]);
 
-  function handleSearch() {
-    setSearch(searchInput);
-    setPage(1);
-  }
+  useEffect(() => {
+    const t = setTimeout(() => { setSearch(searchInput.trim()); setPage(1); }, 250);
+    return () => clearTimeout(t);
+  }, [searchInput, setSearch, setPage]);
 
-  const columns: Column<Product>[] = [
-    { key: "sku", label: "SKU" },
-    { key: "name", label: "Name" },
-    { key: "brand", label: "Brand" },
+  /* ── table columns ── */
+  const columns: Column<Material>[] = [
+    {
+      key: "productId",
+      label: "Code",
+      render: (r) => (
+        <span className="font-mono text-[12px] text-ink-700 whitespace-nowrap">{r.productId}</span>
+      ),
+    },
+    {
+      key: "name",
+      label: "Description",
+      render: (r) => (
+        <div className="min-w-[180px]">
+          <div className="font-medium text-ink-900">{r.name}</div>
+          {r.subCategory && <div className="text-[11.5px] text-ink-400">{r.subCategory}</div>}
+        </div>
+      ),
+    },
+    {
+      key: "make",
+      label: "Make",
+      render: (r) => r.make ? <span className="text-ink-700">{r.make}</span> : <span className="text-ink-400">—</span>,
+    },
+    {
+      key: "size",
+      label: "Size / Spec",
+      render: (r) => r.size ? <span className="whitespace-nowrap text-ink-700">{r.size}</span> : <span className="text-ink-400">—</span>,
+    },
     { key: "unit", label: "Unit" },
     {
-      key: "purchasePrice",
-      label: "Purchase Price",
-      render: (row) => (row.purchasePrice != null ? `₹${row.purchasePrice.toLocaleString()}` : "—"),
+      key: "category",
+      label: "Category",
+      render: (r) => <Chip tone="slate">{r.category}</Chip>,
     },
     {
-      key: "sellingPrice",
-      label: "Selling Price",
-      render: (row) => (row.sellingPrice != null ? `₹${row.sellingPrice.toLocaleString()}` : "—"),
-    },
-    { key: "minimumStock", label: "Min Stock" },
-    {
-      key: "actions",
-      label: "",
-      render: (row) => (
-        <Button variant="ghost" size="sm" onClick={() => openEdit(row)}>
-          Edit
-        </Button>
+      key: "quantity",
+      label: "Qty",
+      className: "text-right",
+      render: (r) => (
+        <span className="tnum font-medium">{r.quantity > 0 ? qty(r.quantity, r.unit) : <span className="text-ink-400">—</span>}</span>
       ),
+    },
+    {
+      key: "rate",
+      label: "Purchase rate",
+      className: "text-right",
+      render: (r) => (
+        <span className="tnum">{r.purchasePrice > 0 ? inr(r.purchasePrice) : <span className="text-ink-400">—</span>}</span>
+      ),
+    },
+    {
+      key: "value",
+      label: "Value",
+      className: "text-right",
+      render: (r) => {
+        const val = r.purchasePrice * r.quantity;
+        return (
+          <div className="text-right">
+            <span className="tnum font-medium">{val > 0 ? inr(val) : <span className="text-ink-400">—</span>}</span>
+            {val > 0 && (
+              <div className="text-[10.5px] text-ink-400 tnum">
+                {inr(r.purchasePrice)} × {r.quantity}
+              </div>
+            )}
+          </div>
+        );
+      },
+    },
+    {
+      key: "addedAt",
+      label: "Added",
+      render: (r) => r.addedAt ? <span className="text-[12px] text-ink-500 whitespace-nowrap">{shortDate(r.addedAt)}</span> : <span className="text-ink-400">—</span>,
     },
   ];
 
+  const sheets = summary?.sheets ?? [];
+
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <PageHeader
-        kicker="Records · catalogue"
-        title="SKU master"
-        description="Every item the stores carry — rate, unit and reorder settings."
-        actions={
-          <Button onClick={openCreate}>
-            <Plus className="h-4 w-4" /> Add Product
-          </Button>
-        }
+        kicker="Catalogue · material list"
+        title="Every SKU behind the ledger"
+        description="The material master — all items from the workbook, one row per product-size variant."
+        actions={<PendingDeliveriesBell />}
       />
 
-      <div className="flex items-center gap-2">
-        <div className="relative flex-1 max-w-sm">
-          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-400" />
-          <input
-            type="text"
-            placeholder="Search products..."
-            value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-            className="w-full border border-paper-300 bg-paper-50 py-2 pl-9 pr-3 text-[13.5px] text-ink-900 placeholder:text-ink-400 focus:border-ink-700 focus:outline-none"
-          />
-        </div>
-        <Button variant="secondary" onClick={handleSearch}>
-          Search
-        </Button>
+      {/* KPI row */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <KpiCard title="SKUs in catalogue" value={summary?.total ?? "—"} />
+        <KpiCard title="Sheets imported" value={summary?.sheets.length ?? "—"} />
+        <KpiCard title="Categories" value={summary?.categories.length ?? "—"} />
+        <KpiCard
+          title="Total stock value"
+          value={summary ? inrShort(summary.stockValue) : "—"}
+          subtitle="valued at purchase rate"
+        />
       </div>
 
+      {/* Search + sheet tabs */}
+      <div className="flex flex-col gap-3">
+        <div className="relative w-full lg:w-80">
+          <Search className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-ink-400" />
+          <input
+            type="text"
+            placeholder="Search code, name, make or size…"
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
+            className="field !pl-8"
+          />
+        </div>
+        <div className="flex flex-wrap gap-1">
+          <button
+            type="button"
+            onClick={() => { setSheet(""); setPage(1); }}
+            className={clsx(
+              "px-2.5 py-1.5 text-[12px] font-medium border transition-colors",
+              !sheet
+                ? "bg-ink-900 text-paper-50 border-ink-900"
+                : "border-paper-300 bg-paper-50 text-ink-600 hover:text-ink-900"
+            )}
+          >
+            All
+          </button>
+          {sheets.map((s) => (
+            <button
+              key={s}
+              type="button"
+              onClick={() => { setSheet(s); setPage(1); }}
+              className={clsx(
+                "px-2.5 py-1.5 text-[12px] font-medium border transition-colors",
+                sheet === s
+                  ? "bg-ink-900 text-paper-50 border-ink-900"
+                  : "border-paper-300 bg-paper-50 text-ink-600 hover:text-ink-900"
+              )}
+            >
+              {TAB_LABELS[s] ?? s}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Table */}
       <DataTable
         columns={columns}
         data={data}
         loading={loading}
-        emptyMessage="No products found. Click 'Add Product' to create one."
+        emptyMessage="No materials match."
         pagination={{ page, pages, total, onPageChange: setPage }}
       />
-
-      <Modal
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-        title={editId ? "Edit Product" : "Add Product"}
-        maxWidth="max-w-3xl"
-      >
-        <div className="max-h-[70vh] overflow-y-auto">
-          <div className="grid grid-cols-2 gap-4">
-            <FormInput label="SKU" required value={form.sku} onChange={(e) => set("sku", e.target.value)} />
-            <FormInput label="Name" required value={form.name} onChange={(e) => set("name", e.target.value)} />
-            <FormInput label="Category" value={form.category} onChange={(e) => set("category", e.target.value)} placeholder="Category name" />
-            <FormInput label="Brand" value={form.brand} onChange={(e) => set("brand", e.target.value)} />
-            <FormInput label="Model Number" value={form.modelNumber} onChange={(e) => set("modelNumber", e.target.value)} />
-            <FormSelect label="Unit" required value={form.unit} onChange={(e) => set("unit", e.target.value)}>
-              <option value="Nos">Nos</option>
-              <option value="Mtrs">Mtrs</option>
-              <option value="Kgs">Kgs</option>
-              <option value="Ltrs">Ltrs</option>
-              <option value="Set">Set</option>
-              <option value="Pair">Pair</option>
-              <option value="Box">Box</option>
-              <option value="Roll">Roll</option>
-            </FormSelect>
-            <FormInput label="Purchase Price" type="number" value={form.purchasePrice} onChange={(e) => set("purchasePrice", e.target.value)} />
-            <FormInput label="Selling Price" type="number" value={form.sellingPrice} onChange={(e) => set("sellingPrice", e.target.value)} />
-            <FormInput label="Minimum Stock" type="number" value={form.minimumStock} onChange={(e) => set("minimumStock", e.target.value)} />
-            <FormInput label="Maximum Stock" type="number" value={form.maximumStock} onChange={(e) => set("maximumStock", e.target.value)} />
-            <FormInput label="Reorder Level" type="number" value={form.reorderLevel} onChange={(e) => set("reorderLevel", e.target.value)} />
-            <FormInput label="Warranty Period (months)" type="number" value={form.warrantyPeriod} onChange={(e) => set("warrantyPeriod", e.target.value)} />
-            <div className="col-span-2 flex gap-6">
-              <label className="flex items-center gap-2 text-sm text-gray-700">
-                <input
-                  type="checkbox"
-                  checked={form.serialTracking}
-                  onChange={(e) => set("serialTracking", e.target.checked)}
-                  className="h-4 w-4 accent-ink-900"
-                />
-                Serial Tracking
-              </label>
-              <label className="flex items-center gap-2 text-sm text-gray-700">
-                <input
-                  type="checkbox"
-                  checked={form.batchTracking}
-                  onChange={(e) => set("batchTracking", e.target.checked)}
-                  className="h-4 w-4 accent-ink-900"
-                />
-                Batch Tracking
-              </label>
-            </div>
-            <FormTextarea label="Description" value={form.description} onChange={(e) => set("description", e.target.value)} className="col-span-2" />
-          </div>
-        </div>
-        <div className="mt-5 flex justify-end gap-2">
-          <Button variant="secondary" onClick={() => setModalOpen(false)}>Cancel</Button>
-          <Button onClick={handleSave} disabled={saving}>
-            {saving ? "Saving..." : editId ? "Update" : "Create"}
-          </Button>
-        </div>
-      </Modal>
     </div>
   );
 }

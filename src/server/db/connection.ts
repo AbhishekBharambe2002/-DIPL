@@ -18,6 +18,14 @@ import "@/server/models/audit-log";
 import "@/server/models/notification";
 import "@/server/models/boq-item";
 import "@/server/models/project-cost";
+import "@/server/models/purchase-order";
+import "@/server/models/vendor-invoice";
+import "@/server/models/bundle";
+import "@/server/models/project-material";
+import "@/server/models/material";
+import "@/server/models/inventory-log";
+import "@/server/models/project-site-log";
+import "@/server/models/primary-order";
 
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/firesafe";
 

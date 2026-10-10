@@ -5,6 +5,7 @@ import { Project } from "@/server/models/project";
 import { BoqItem } from "@/server/models/boq-item";
 import { ProjectCost } from "@/server/models/project-cost";
 import { StockTransaction } from "@/server/models/stock-transaction";
+import { ProjectSiteLog } from "@/server/models/project-site-log";
 import { Site } from "@/server/models/site";
 import { Task } from "@/server/models/task";
 import { getAuthenticatedUser, errorResponse, successResponse } from "@/lib/api-utils";
@@ -26,7 +27,7 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ id:
   if (!project) return errorResponse("Not found", "NOT_FOUND", 404);
 
   const oid = new mongoose.Types.ObjectId(id);
-  const [{ economics, materials }, boq, costs, transactions, sites, tasks] = await Promise.all([
+  const [{ economics, materials }, boq, costs, oldTransactions, siteLogs, sites, tasks] = await Promise.all([
     computeEconomics({ _id: oid }),
     BoqItem.find({ project: oid }).sort({ itemNo: 1 }).lean(),
     ProjectCost.find({ project: oid }).sort({ date: -1 }).lean(),
@@ -34,6 +35,12 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ id:
       .populate("product", "sku name unit purchasePrice")
       .populate("createdBy", "name")
       .sort({ createdAt: -1 })
+      .limit(20)
+      .lean(),
+    ProjectSiteLog.find({ project: oid })
+      .populate("material", "productId name unit category")
+      .populate("createdBy", "name")
+      .sort({ date: -1 })
       .limit(20)
       .lean(),
     Site.find({ project: oid, isDeleted: { $ne: true } }).select("siteId name city status").lean(),
@@ -44,13 +51,35 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ id:
       .lean(),
   ]);
 
+  // Merge old stock transactions and new site logs into a unified transactions array
+  const TYPE_MAP: Record<string, string> = { dispatch: "site_issue", consumed: "consumed", returned: "site_return" };
+  const newTransactions = siteLogs.map((l) => {
+    const mat = l.material as unknown as { productId: string; name: string; unit: string; category: string } | null;
+    return {
+      _id: l._id,
+      type: TYPE_MAP[l.type] ?? l.type,
+      quantity: l.quantity,
+      createdAt: l.date,
+      notes: l.note,
+      product: mat
+        ? { sku: mat.productId, name: mat.name, unit: mat.unit, purchasePrice: l.rate }
+        : undefined,
+      createdBy: l.createdBy as unknown as { name: string } | undefined,
+    };
+  });
+
+  // Combine and sort by date descending, take top 20
+  const allTransactions = [...oldTransactions, ...newTransactions]
+    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+    .slice(0, 20);
+
   return successResponse({
     project,
     economics: economics[0],
     materials: materials.sort((a, b) => b.balanceValue - a.balanceValue),
     boq,
     costs,
-    transactions,
+    transactions: allTransactions,
     sites,
     tasks,
   });

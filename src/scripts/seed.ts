@@ -35,7 +35,7 @@ async function seed() {
     "roles", "users", "customers", "vendors", "employees",
     "categories", "products", "warehouses", "inventories",
     "projects", "sites", "tasks", "stocktransactions",
-    "servicerequests", "sitevisits", "auditlogs", "boqitems", "projectcosts",
+    "servicerequests", "sitevisits", "auditlogs", "boqitems", "projectcosts", "purchaseorders", "vendorinvoices", "bundletypes", "bundleinstances", "projectmaterials",
   ];
   for (const name of collections) {
     try { await db.collection(name).drop(); } catch { /* may not exist */ }
@@ -75,7 +75,7 @@ async function seed() {
 
   // ─── Vendors ───────────────────────────────────────────
   console.log("Creating vendors...");
-  await db.collection("vendors").insertMany([
+  const vendorsResult = await db.collection("vendors").insertMany([
     { vendorName: "SafeFlame Equipments", contactPerson: "Ramesh Patel", phone: "+91 9877700001", email: "sales@safeflame.com", city: "Ahmedabad", state: "Gujarat", paymentTerms: "Net 30", isDeleted: false, createdAt: new Date(), updatedAt: new Date() },
     { vendorName: "FireGuard Systems", contactPerson: "Manoj Tiwari", phone: "+91 9877700002", email: "info@fireguard.in", city: "Delhi", state: "Delhi", paymentTerms: "Net 45", isDeleted: false, createdAt: new Date(), updatedAt: new Date() },
     { vendorName: "Hydro Fire Solutions", contactPerson: "Kiran Desai", phone: "+91 9877700003", email: "kiran@hydrofire.com", city: "Mumbai", state: "Maharashtra", paymentTerms: "Advance", isDeleted: false, createdAt: new Date(), updatedAt: new Date() },
@@ -252,25 +252,113 @@ async function seed() {
     [2, 6, 900, 820, 30], [2, 5, 220, 200, 0], [2, 2, 28, 26, 0], [2, 9, 500, 450, 20], [2, 8, 90, 80, 0],
     [3, 0, 150, 140, 0], [3, 5, 90, 80, 0], [3, 4, 1, 1, 0],
   ];
-  const onHand = [...mainQty];
-  const txns: Record<string, unknown>[] = [];
   const day = 86400000;
+  const rates = [1200, 2500, 3500, 2800, 15000, 800, 180, 85000, 600, 350];
+
+  // ─── Purchase orders & supplier invoices ───────────────
+  console.log("Creating purchase orders and supplier invoices...");
+  const V = vendorsResult.insertedIds;
+  type Buy = {
+    po: string; inv: string | null; vendor: number; wh: 0 | 1; ago: number;
+    lines: [number, number, number][]; project?: number; expectedIn?: number; cancelled?: boolean; draft?: boolean;
+  };
+  // Opening stock arrives through these receipts; main/pune totals equal mainQty/puneQty.
+  const buys: Buy[] = [
+    { po: "DIPL/PO-001", inv: "SF/2401", vendor: 0, wh: 0, ago: 210, lines: [[0, 440, 440], [1, 120, 120], [8, 360, 360]] },
+    { po: "DIPL/PO-002", inv: "FG/INV/1187", vendor: 1, wh: 0, ago: 205, lines: [[4, 12, 12], [5, 1000, 1000]] },
+    { po: "DIPL/PO-003", inv: "HFS/23-24/552", vendor: 2, wh: 0, ago: 200, lines: [[2, 150, 150], [3, 100, 100], [7, 4, 4]] },
+    { po: "DIPL/PO-004", inv: "HFS/23-24/571", vendor: 2, wh: 0, ago: 190, lines: [[6, 5400, 5400], [9, 2700, 2700]] },
+    { po: "DIPL/PO-005", inv: "SF/2433", vendor: 0, wh: 1, ago: 185, lines: [[0, 40, 40], [1, 18, 18], [8, 32, 32]] },
+    { po: "DIPL/PO-006", inv: "FG/INV/1203", vendor: 1, wh: 1, ago: 182, lines: [[4, 3, 3], [5, 60, 60]] },
+    { po: "DIPL/PO-007", inv: "HFS/23-24/590", vendor: 2, wh: 1, ago: 180, lines: [[2, 12, 12], [3, 10, 10], [6, 200, 200], [7, 1, 1], [9, 80, 80]] },
+    { po: "DIPL/PO-008", inv: "FG/INV/1342", vendor: 1, wh: 0, ago: 20, project: 0, expectedIn: 15, lines: [[5, 300, 120]] },
+    { po: "DIPL/PO-009", inv: null, vendor: 2, wh: 0, ago: 12, project: 0, expectedIn: 22, lines: [[6, 1000, 0], [2, 20, 0]] },
+    { po: "DIPL/PO-010", inv: null, vendor: 0, wh: 0, ago: 40, project: 2, expectedIn: 10, lines: [[0, 60, 0]], cancelled: true },
+    { po: "DIPL/PO-011", inv: "SF/2519", vendor: 0, wh: 0, ago: 3, project: 3, expectedIn: 7, lines: [[0, 80, 0], [8, 40, 0]], draft: true },
+  ];
+  const poStatus = (b: Buy) => {
+    if (b.cancelled) return "cancelled";
+    const rec = b.lines.reduce((s, l) => s + l[2], 0);
+    if (rec === 0) return "open";
+    return b.lines.every((l) => l[2] >= l[1]) ? "closed" : "partial";
+  };
+  const poResult = await db.collection("purchaseorders").insertMany(
+    buys.map((b) => ({
+      poNumber: b.po, vendor: V[b.vendor], project: b.project != null ? P[b.project] : undefined,
+      date: new Date(Date.now() - b.ago * day),
+      expectedDate: b.expectedIn != null ? new Date(Date.now() - (b.ago - b.expectedIn) * day) : new Date(Date.now() - (b.ago - 3) * day),
+      status: poStatus(b),
+      lines: b.lines.map(([prod, q, rec]) => ({ _id: new mongoose.Types.ObjectId(), product: productIds[prod], quantity: q, rate: rates[prod], receivedQty: rec })),
+      createdBy: adminId, createdAt: new Date(Date.now() - b.ago * day), updatedAt: new Date(),
+    }))
+  );
+  const invoiceDocs = buys.flatMap((b, i) => {
+    if (!b.inv) return [];
+    const lines = b.lines.map(([prod, q, rec]) => ({ product: productIds[prod], quantity: b.draft ? q : rec, rate: rates[prod], gstPercent: 18 }));
+    const taxable = lines.reduce((s, l) => s + l.quantity * l.rate, 0);
+    const gst = Math.round(taxable * 0.18 * 100) / 100;
+    const date = new Date(Date.now() - (b.ago - 3) * day);
+    return [{
+      _id: new mongoose.Types.ObjectId(), invoiceNo: b.inv, vendor: V[b.vendor], purchaseOrder: poResult.insertedIds[i],
+      warehouse: warehouseIds[b.wh], date, lines, taxable, gst, total: taxable + gst, captureMethod: "manual",
+      status: b.draft ? "draft" : "posted", postedAt: b.draft ? undefined : date, postedBy: b.draft ? undefined : adminId,
+      createdBy: adminId, createdAt: date, updatedAt: date,
+    }];
+  });
+  await db.collection("vendorinvoices").insertMany(invoiceDocs);
+
+  // ─── Ledger: replay receipts and site movements in date order ──
+  type Ev = { at: number; wh: 0 | 1; prod: number; delta: number; doc: Record<string, unknown> };
+  const events: Ev[] = [];
+  for (const inv of invoiceDocs) {
+    if (inv.status !== "posted") continue;
+    const wh = String(inv.warehouse) === String(warehouseIds[0]) ? 0 : 1;
+    for (const l of inv.lines) {
+      const prod = productIds.findIndex((id) => String(id) === String(l.product));
+      events.push({
+        at: inv.date.getTime(), wh, prod, delta: l.quantity,
+        doc: { product: l.product, warehouse: inv.warehouse, type: "purchase", quantity: l.quantity, referenceType: "VendorInvoice", referenceId: inv._id, notes: `Invoice ${inv.invoiceNo}`, createdBy: adminId },
+      });
+    }
+  }
   moves.forEach(([pi, prod, issued, consumed, returned], i) => {
     const base = Date.now() - (150 - i * 5) * day;
     const common = { product: productIds[prod], warehouse: warehouseIds[0], project: P[pi], site: projSite[pi], createdBy: adminId };
-    const before = onHand[prod];
-    onHand[prod] -= issued;
-    txns.push({ ...common, type: "site_issue", quantity: issued, previousQuantity: before, newQuantity: onHand[prod], notes: "Dispatch to site", createdAt: new Date(base) });
-    txns.push({ ...common, type: "consumed", quantity: consumed, previousQuantity: onHand[prod], newQuantity: onHand[prod], notes: "Consumed at site", createdAt: new Date(base + 9 * day) });
-    if (returned > 0) {
-      const b = onHand[prod];
-      onHand[prod] += returned;
-      txns.push({ ...common, type: "site_return", quantity: returned, previousQuantity: b, newQuantity: onHand[prod], notes: "Surplus returned to store", createdAt: new Date(base + 14 * day) });
-    }
+    events.push({ at: base, wh: 0, prod, delta: -issued, doc: { ...common, type: "site_issue", quantity: issued, notes: "Dispatch to site" } });
+    events.push({ at: base + 9 * day, wh: 0, prod, delta: 0, doc: { ...common, type: "consumed", quantity: consumed, notes: "Consumed at site" } });
+    if (returned > 0) events.push({ at: base + 14 * day, wh: 0, prod, delta: returned, doc: { ...common, type: "site_return", quantity: returned, notes: "Surplus returned to store" } });
+  });
+  events.sort((a, b) => a.at - b.at);
+  const onHand: [number[], number[]] = [productIds.map(() => 0), productIds.map(() => 0)];
+  const txns = events.map((e) => {
+    const before = onHand[e.wh][e.prod];
+    onHand[e.wh][e.prod] += e.delta;
+    if (onHand[e.wh][e.prod] < 0) throw new Error(`Seed ledger went negative for product ${e.prod}`);
+    return { ...e.doc, previousQuantity: before, newQuantity: onHand[e.wh][e.prod], createdAt: new Date(e.at) };
   });
   await db.collection("stocktransactions").insertMany(txns);
   for (let pi = 0; pi < productIds.length; pi++) {
-    await db.collection("inventories").updateOne({ product: productIds[pi], warehouse: warehouseIds[0] }, { $set: { quantity: onHand[pi] } });
+    for (const w of [0, 1] as const) {
+      await db.collection("inventories").updateOne({ product: productIds[pi], warehouse: warehouseIds[w] }, { $set: { quantity: onHand[w][pi] } });
+    }
+  }
+
+  console.log("Building project materials from the ledger...");
+  const { rebuildProjectMaterials } = await import("../server/services/project-materials");
+  const projectMaterialCount = await rebuildProjectMaterials();
+
+  console.log("Setting expected materials per project...");
+  // [projectIndex, [productIndex, plannedQty][]] — Sunrise (3) has drawn more extinguishers than planned.
+  const plans: [number, [number, number][]][] = [
+    [0, [[6, 1600], [9, 1100], [2, 45], [5, 400], [0, 120], [8, 300], [4, 2], [7, 1]]],
+    [1, [[9, 600], [2, 56], [6, 2000], [0, 100]]],
+    [2, [[6, 1200], [5, 300], [2, 30], [9, 600], [8, 120]]],
+    [3, [[0, 120], [5, 150], [4, 1]]],
+    [4, [[6, 2400], [9, 1500], [2, 60], [7, 2], [4, 3]]],
+  ];
+  const { setPlannedMaterials } = await import("../server/services/project-materials");
+  for (const [pi, items] of plans) {
+    await setPlannedMaterials(String(P[pi]), items.map(([prod, planned]) => ({ product: String(productIds[prod]), planned })));
   }
 
   // ─── Project cost entries ──────────────────────────────
@@ -306,6 +394,30 @@ async function seed() {
     }))
   );
 
+  // ─── Bundle definitions ────────────────────────────────
+  console.log("Creating bundle definitions...");
+  await db.collection("bundletypes").insertMany([
+    {
+      code: "BH-001", name: "Fire Hydrant Landing Assembly",
+      description: "Landing valve, hydrant valve and riser pipe issued to a floor as one package.",
+      components: [{ product: productIds[9], quantity: 6 }, { product: productIds[2], quantity: 1 }, { product: productIds[3], quantity: 1 }],
+      isDeleted: false, createdBy: adminId, createdAt: new Date(), updatedAt: new Date(),
+    },
+    {
+      code: "SK-024", name: "Sprinkler Floor Kit (24 heads)",
+      description: "One floor's sprinkler heads with branch piping.",
+      components: [{ product: productIds[6], quantity: 24 }, { product: productIds[9], quantity: 30 }],
+      isDeleted: false, createdBy: adminId, createdAt: new Date(), updatedAt: new Date(),
+    },
+  ]);
+
+  // Dropping collections also drops their unique indexes; rebuild them from the model schemas.
+  console.log("Rebuilding indexes...");
+  const models = await import("../server/models");
+  for (const m of Object.values(models)) {
+    if (m && typeof (m as mongoose.Model<unknown>).createIndexes === "function") await (m as mongoose.Model<unknown>).createIndexes();
+  }
+
   console.log("\n✓ Seed completed successfully!");
   console.log("──────────────────────────────────");
   console.log("Login:  admin / admin   (or rajesh@dipl.in / admin123)");
@@ -326,8 +438,10 @@ async function seed() {
   console.log(`  3 Service Requests`);
   console.log(`  3 Site Visits`);
   console.log(`  ${boqDocs.length} BOQ lines`);
-  console.log(`  ${txns.length} Site stock movements`);
+  console.log(`  ${txns.length} Stock ledger rows`);
   console.log(`  ${costRows.length} Project cost entries`);
+  console.log(`  ${buys.length} Purchase orders, ${invoiceDocs.length} supplier invoices`);
+  console.log(`  ${projectMaterialCount} Project material records`);
 
   await mongoose.disconnect();
   process.exit(0);

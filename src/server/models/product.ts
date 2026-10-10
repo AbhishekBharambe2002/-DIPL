@@ -51,7 +51,6 @@ const ProductSchema = new Schema<IProduct>(
   { timestamps: true }
 );
 
-ProductSchema.index({ sku: 1 });
 ProductSchema.index({ category: 1 });
 ProductSchema.index({ name: "text", sku: "text" });
 

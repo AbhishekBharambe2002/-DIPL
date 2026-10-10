@@ -1,10 +1,12 @@
 import mongoose from "mongoose";
 import { Project } from "@/server/models/project";
-import { StockTransaction } from "@/server/models/stock-transaction";
+import { ProjectMaterial } from "@/server/models/project-material";
+import { ProjectSiteLog } from "@/server/models/project-site-log";
 import { ProjectCost } from "@/server/models/project-cost";
 import { BoqItem } from "@/server/models/boq-item";
+import { resolveCatalogItems } from "@/server/services/catalog";
 
-export const SITE_MOVES = ["site_issue", "consumed", "site_return"] as const;
+export const SITE_MOVES = ["site_issue", "consumed", "site_return", "dispatch", "returned"] as const;
 
 export interface MaterialRow {
   projectId: string;
@@ -15,11 +17,14 @@ export interface MaterialRow {
   unit: string;
   category: string;
   rate: number;
+  planned: number;
   allocated: number;
   consumed: number;
   returned: number;
   balance: number;
   balanceValue: number;
+  /** which catalogue this came from — the old Product/SKU master, or the Material catalogue */
+  source: "product" | "material";
 }
 
 export interface ProjectEconomics {
@@ -53,40 +58,86 @@ export interface ProjectEconomics {
 
 type Ids = mongoose.Types.ObjectId[];
 
+/**
+ * Build material rows from BOTH old ProjectMaterial AND new ProjectSiteLog collections.
+ * Old rows come from ProjectMaterial, resolved against whichever catalogue the
+ * item actually belongs to — the old Product/SKU master or the 393-item Material
+ * catalogue (Expected materials can point at either one).
+ * New rows come from ProjectSiteLog → materials (the 393 Excel-imported items).
+ */
 async function materialRows(ids: Ids): Promise<Omit<MaterialRow, "projectCode">[]> {
-  const rows = await StockTransaction.aggregate([
-    { $match: { project: { $in: ids }, type: { $in: SITE_MOVES } } },
+  // ── Old system: ProjectMaterial, resolved against either catalogue ──
+  const oldDocs = await ProjectMaterial.find({ project: { $in: ids } }).lean();
+  const catalog = await resolveCatalogItems(oldDocs.map((r) => r.product));
+
+  const result: Omit<MaterialRow, "projectCode">[] = oldDocs
+    .map((r) => {
+      const item = catalog.get(String(r.product));
+      if (!item) return null; // catalogue item was deleted since
+      const rate = item.purchasePrice;
+      const balance = Math.max(0, r.balance);
+      return {
+        projectId: String(r.project),
+        productId: String(r.product),
+        sku: item.sku,
+        name: item.name,
+        unit: item.unit,
+        category: item.category,
+        rate,
+        planned: r.planned ?? 0,
+        allocated: r.allocated,
+        consumed: r.consumed,
+        returned: r.returned,
+        balance,
+        balanceValue: balance * rate,
+        source: item.source,
+      };
+    })
+    .filter((r): r is NonNullable<typeof r> => !!r);
+
+  // ── New system: ProjectSiteLog → materials ──
+  const newRows = await ProjectSiteLog.aggregate([
+    { $match: { project: { $in: ids } } },
     {
       $group: {
-        _id: { project: "$project", product: "$product" },
-        allocated: { $sum: { $cond: [{ $eq: ["$type", "site_issue"] }, "$quantity", 0] } },
+        _id: { project: "$project", material: "$material", productId: "$productId" },
+        rate: { $first: "$rate" },
+        // "In transit" dispatches have already left inventory, but only count toward
+        // Allocated once delivery at site is confirmed.
+        allocated: {
+          $sum: {
+            $cond: [{ $and: [{ $eq: ["$type", "dispatch"] }, { $eq: ["$deliveryStatus", "delivered"] }] }, "$quantity", 0],
+          },
+        },
         consumed: { $sum: { $cond: [{ $eq: ["$type", "consumed"] }, "$quantity", 0] } },
-        returned: { $sum: { $cond: [{ $eq: ["$type", "site_return"] }, "$quantity", 0] } },
+        returned: { $sum: { $cond: [{ $eq: ["$type", "returned"] }, "$quantity", 0] } },
       },
     },
-    { $lookup: { from: "products", localField: "_id.product", foreignField: "_id", as: "p" } },
-    { $unwind: "$p" },
-    { $lookup: { from: "categories", localField: "p.category", foreignField: "_id", as: "c" } },
+    { $lookup: { from: "materials", localField: "_id.material", foreignField: "_id", as: "m" } },
+    { $unwind: "$m" },
   ]);
 
-  return rows.map((r) => {
-    const rate = r.p.purchasePrice ?? 0;
+  for (const r of newRows) {
     const balance = Math.max(0, r.allocated - r.consumed - r.returned);
-    return {
+    result.push({
       projectId: String(r._id.project),
-      productId: String(r._id.product),
-      sku: r.p.sku,
-      name: r.p.name,
-      unit: r.p.unit,
-      category: r.c[0]?.name ?? "",
-      rate,
+      productId: r._id.productId,
+      sku: r._id.productId,
+      name: r.m.name,
+      unit: r.m.unit,
+      category: r.m.category,
+      rate: r.rate,
+      planned: 0,
       allocated: r.allocated,
       consumed: r.consumed,
       returned: r.returned,
       balance,
-      balanceValue: balance * rate,
-    };
-  });
+      balanceValue: balance * r.rate,
+      source: "material" as const,
+    });
+  }
+
+  return result;
 }
 
 export async function computeEconomics(filter: Record<string, unknown> = {}) {

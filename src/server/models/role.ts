@@ -24,6 +24,5 @@ const RoleSchema = new Schema<IRole>(
   { timestamps: true }
 );
 
-RoleSchema.index({ code: 1 });
 
 export const Role = mongoose.models.Role || mongoose.model<IRole>("Role", RoleSchema);

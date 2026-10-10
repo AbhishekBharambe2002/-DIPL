@@ -31,7 +31,6 @@ const EmployeeSchema = new Schema<IEmployee>(
   { timestamps: true }
 );
 
-EmployeeSchema.index({ employeeId: 1 });
 EmployeeSchema.index({ name: "text" });
 
 export const Employee =

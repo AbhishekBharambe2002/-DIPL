@@ -1,0 +1,5589 @@
+[
+  {
+    "name": "MS ELBOW 90DEG SCH 40",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25mm",
+    "specs": {
+      "sizeInch": "1\"",
+      "sizeMM": "25mm"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "MS ELBOW 90DEG SCH 40",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "32mm",
+    "specs": {
+      "sizeInch": "1 1/4\"",
+      "sizeMM": "32mm"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "MS ELBOW 90DEG SCH 40",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "40mm",
+    "specs": {
+      "sizeInch": "1 1/2\"",
+      "sizeMM": "40mm"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "MS ELBOW 90DEG SCH 40",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "50mm",
+    "specs": {
+      "sizeInch": "2\"",
+      "sizeMM": "50mm"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "MS ELBOW 90DEG SCH 40",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "65mm",
+    "specs": {
+      "sizeInch": "2 1/2\"",
+      "sizeMM": "65mm"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "MS ELBOW 90DEG SCH 40",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "80mm",
+    "specs": {
+      "sizeInch": "3\"",
+      "sizeMM": "80mm"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "MS ELBOW 90DEG SCH 40",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "100mm",
+    "specs": {
+      "sizeInch": "4\"",
+      "sizeMM": "100mm"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "MS ELBOW 90DEG SCH 40",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150mm",
+    "specs": {
+      "sizeInch": "6\"",
+      "sizeMM": "150mm"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "MS BSP COUPLING",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25mm x 15mm",
+    "specs": {
+      "sizeMM": "25mm x 15mm"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 2,
+    "isActive": true
+  },
+  {
+    "name": "MS REDUCER",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "32mm x 25mm",
+    "specs": {
+      "sizeInch": "1 1/4\" x 1\"",
+      "sizeMM": "32mm x 25mm"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 3,
+    "isActive": true
+  },
+  {
+    "name": "GI ELBOW 90DEG SCH 40",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25MM",
+    "specs": {
+      "sizeInch": "1\"",
+      "sizeMM": "25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 4,
+    "isActive": true
+  },
+  {
+    "name": "GI REDUCER",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "32 x 25MM",
+    "specs": {
+      "sizeInch": "1 1/4\" x 1\"",
+      "sizeMM": "32 x 25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 5,
+    "isActive": true
+  },
+  {
+    "name": "GI REDUCER",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "40 x 25MM",
+    "specs": {
+      "sizeInch": "1 1/2\" x 1\"",
+      "sizeMM": "40 x 25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 5,
+    "isActive": true
+  },
+  {
+    "name": "GI REDUCER",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "40 x 32MM",
+    "specs": {
+      "sizeInch": "1 1/2\" x 1 1/4\"",
+      "sizeMM": "40 x 32MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 5,
+    "isActive": true
+  },
+  {
+    "name": "GI REDUCER",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "50 x 40MM",
+    "specs": {
+      "sizeInch": "2\" x 1 1/2\"",
+      "sizeMM": "50 x 40MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 5,
+    "isActive": true
+  },
+  {
+    "name": "GI REDUCER",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "65 x 50MM",
+    "specs": {
+      "sizeInch": "2 1/2\" x 2\"",
+      "sizeMM": "65 x 50MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 5,
+    "isActive": true
+  },
+  {
+    "name": "GI REDUCER",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "80 x 65MM",
+    "specs": {
+      "sizeInch": "3\" x 2 1/2\"",
+      "sizeMM": "80 x 65MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 5,
+    "isActive": true
+  },
+  {
+    "name": "MS FORGE ELBOW THREADED BSP",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25mm x 15mm",
+    "specs": {
+      "sizeInch": "1\" x 1/2\"",
+      "sizeMM": "25mm x 15mm"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 6,
+    "isActive": true
+  },
+  {
+    "name": "MS COUPLING",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "15MM",
+    "specs": {
+      "sizeInch": "1/2\"",
+      "sizeMM": "15MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 7,
+    "isActive": true
+  },
+  {
+    "name": "G.I. B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "80 x 65MM",
+    "specs": {
+      "sizeInch": "3\" x 2 1/2\"",
+      "sizeMM": "80 x 65MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 8,
+    "isActive": true
+  },
+  {
+    "name": "G.I. B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "50 x 40MM",
+    "specs": {
+      "sizeInch": "2\" x 1 1/2\"",
+      "sizeMM": "50 x 40MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 8,
+    "isActive": true
+  },
+  {
+    "name": "G.I. B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "40 x 32MM",
+    "specs": {
+      "sizeInch": "1 1/2\" x 1 1/4\"",
+      "sizeMM": "40 x 32MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 8,
+    "isActive": true
+  },
+  {
+    "name": "G.I. B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "40 x 25MM",
+    "specs": {
+      "sizeInch": "1 1/2\" x 1\"",
+      "sizeMM": "40 x 25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 8,
+    "isActive": true
+  },
+  {
+    "name": "G.I. B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "32 x 25MM",
+    "specs": {
+      "sizeInch": "1 1/4\" x 1\"",
+      "sizeMM": "32 x 25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 8,
+    "isActive": true
+  },
+  {
+    "name": "G.I. B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "80 x 50MM",
+    "specs": {
+      "sizeInch": "3\" x 2\"",
+      "sizeMM": "80 x 50MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 8,
+    "isActive": true
+  },
+  {
+    "name": "G.I. B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "65 x 40MM",
+    "specs": {
+      "sizeInch": "2 1/2\" x 1 1/2\"",
+      "sizeMM": "65 x 40MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 8,
+    "isActive": true
+  },
+  {
+    "name": "G.I. B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "65 x 25MM",
+    "specs": {
+      "sizeInch": "2 1/2\" x 1\"",
+      "sizeMM": "65 x 25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 8,
+    "isActive": true
+  },
+  {
+    "name": "G.I. B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "100 x 80MM",
+    "specs": {
+      "sizeInch": "4\" x 3\"",
+      "sizeMM": "100 x 80MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 8,
+    "isActive": true
+  },
+  {
+    "name": "G.I. B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150 x 100MM",
+    "specs": {
+      "sizeInch": "6\" x 4\"",
+      "sizeMM": "150 x 100MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 8,
+    "isActive": true
+  },
+  {
+    "name": "G.I. B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "65 x 50MM",
+    "specs": {
+      "sizeInch": "2 1/2\" x 2\"",
+      "sizeMM": "65 x 50MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 8,
+    "isActive": true
+  },
+  {
+    "name": "G.I. B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "50 x 25MM",
+    "specs": {
+      "sizeInch": "2\" x 1\"",
+      "sizeMM": "50 x 25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 8,
+    "isActive": true
+  },
+  {
+    "name": "G.I. B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150 x 80MM",
+    "specs": {
+      "sizeInch": "6\" x 3\"",
+      "sizeMM": "150 x 80MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 8,
+    "isActive": true
+  },
+  {
+    "name": "G.I B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150MM",
+    "specs": {
+      "sizeInch": "6\"",
+      "sizeMM": "150MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 9,
+    "isActive": true
+  },
+  {
+    "name": "G.I B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "100MM",
+    "specs": {
+      "sizeInch": "4\"",
+      "sizeMM": "100MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 9,
+    "isActive": true
+  },
+  {
+    "name": "G.I B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "80MM",
+    "specs": {
+      "sizeInch": "3\"",
+      "sizeMM": "80MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 9,
+    "isActive": true
+  },
+  {
+    "name": "G.I B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "65MM",
+    "specs": {
+      "sizeInch": "2 1/2\"",
+      "sizeMM": "65MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 9,
+    "isActive": true
+  },
+  {
+    "name": "G.I B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "50MM",
+    "specs": {
+      "sizeInch": "2\"",
+      "sizeMM": "50MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 9,
+    "isActive": true
+  },
+  {
+    "name": "G.I B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "40MM",
+    "specs": {
+      "sizeInch": "1 1/2\"",
+      "sizeMM": "40MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 9,
+    "isActive": true
+  },
+  {
+    "name": "G.I B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "32MM",
+    "specs": {
+      "sizeInch": "1 1/4\"",
+      "sizeMM": "32MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 9,
+    "isActive": true
+  },
+  {
+    "name": "G.I B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25MM",
+    "specs": {
+      "sizeInch": "1\"",
+      "sizeMM": "25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 9,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "65 x 50MM",
+    "specs": {
+      "sizeInch": "2 1/2\" x 2\"",
+      "sizeMM": "65 x 50MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 10,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "50 x 40MM",
+    "specs": {
+      "sizeInch": "2\" x 1 1/2\"",
+      "sizeMM": "50 x 40MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 10,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "40 x 32MM",
+    "specs": {
+      "sizeInch": "1 1/2\" x 1 1/4\"",
+      "sizeMM": "40 x 32MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 10,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "32 x 25MM",
+    "specs": {
+      "sizeInch": "1 1/4\" x 1\"",
+      "sizeMM": "32 x 25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 10,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150 x 100MM",
+    "specs": {
+      "sizeInch": "6\" x 4\"",
+      "sizeMM": "150 x 100MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 10,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "100 x 80MM",
+    "specs": {
+      "sizeInch": "4\" x 3\"",
+      "sizeMM": "100 x 80MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 10,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "50 x 25MM",
+    "specs": {
+      "sizeInch": "2\" x 1\"",
+      "sizeMM": "50 x 25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 10,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "65 x 40MM",
+    "specs": {
+      "sizeInch": "2 1/2\" x 1 1/2\"",
+      "sizeMM": "65 x 40MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 10,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "80 x 40MM",
+    "specs": {
+      "sizeInch": "3\" x 1 1/2\"",
+      "sizeMM": "80 x 40MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 10,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150MM",
+    "specs": {
+      "sizeInch": "6\"",
+      "sizeMM": "150MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 11,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "100MM",
+    "specs": {
+      "sizeInch": "4\"",
+      "sizeMM": "100MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 11,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "80MM",
+    "specs": {
+      "sizeInch": "3\"",
+      "sizeMM": "80MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 11,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "65MM",
+    "specs": {
+      "sizeInch": "2 1/2\"",
+      "sizeMM": "65MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 11,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "50MM",
+    "specs": {
+      "sizeInch": "2\"",
+      "sizeMM": "50MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 11,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "40MM",
+    "specs": {
+      "sizeInch": "1 1/2\"",
+      "sizeMM": "40MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 11,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "32MM",
+    "specs": {
+      "sizeInch": "1 1/4\"",
+      "sizeMM": "32MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 11,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25MM",
+    "specs": {
+      "sizeInch": "1\"",
+      "sizeMM": "25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 11,
+    "isActive": true
+  },
+  {
+    "name": "G.I SW BSP FORGE ELBOW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25x15MM",
+    "specs": {
+      "sizeInch": "1\" x 1/2\"",
+      "sizeMM": "25x15MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 12,
+    "isActive": true
+  },
+  {
+    "name": "G.I SW BSP FORGE SOCKET",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25x15MM",
+    "specs": {
+      "sizeInch": "1\" x 1/2\"",
+      "sizeMM": "25x15MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 13,
+    "isActive": true
+  },
+  {
+    "name": "G.I DUMMY PLATE",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "80MM",
+    "specs": {
+      "sizeInch": "3\"",
+      "sizeMM": "80MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 14,
+    "isActive": true
+  },
+  {
+    "name": "G.I S/O E TABLE FLANGE",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "80MM",
+    "specs": {
+      "sizeInch": "3\"",
+      "sizeMM": "80MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 15,
+    "isActive": true
+  },
+  {
+    "name": "G.I S/O E TABLE FLANGE",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "100MM",
+    "specs": {
+      "sizeInch": "4\"",
+      "sizeMM": "100MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 16,
+    "isActive": true
+  },
+  {
+    "name": "G.I S/O E TABLE FLANGE",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150MM",
+    "specs": {
+      "sizeInch": "6\"",
+      "sizeMM": "150MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 17,
+    "isActive": true
+  },
+  {
+    "name": "MS BLIND E TABLE FLANGE",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "200MM",
+    "specs": {
+      "sizeInch": "8\"",
+      "sizeMM": "200MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 18,
+    "isActive": true
+  },
+  {
+    "name": "MS S/O E TABLE FLANGE",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "50MM",
+    "specs": {
+      "sizeInch": "2\"",
+      "sizeMM": "50MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 19,
+    "isActive": true
+  },
+  {
+    "name": "MS S/O E TABLE FLANGE",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "80MM",
+    "specs": {
+      "sizeInch": "3\"",
+      "sizeMM": "80MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 20,
+    "isActive": true
+  },
+  {
+    "name": "MS FORGE SOCKET",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "15MM",
+    "specs": {
+      "sizeInch": "1/2\"",
+      "sizeMM": "15MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 21,
+    "isActive": true
+  },
+  {
+    "name": "MS FORGE SOCKET",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "10MM",
+    "specs": {
+      "sizeMM": "10MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 22,
+    "isActive": true
+  },
+  {
+    "name": "G.I FORGE SOCKET",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "15MM",
+    "specs": {
+      "sizeInch": "1/2\"",
+      "sizeMM": "15MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 23,
+    "isActive": true
+  },
+  {
+    "name": "MS S/O E TABLE FLANGE",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "200MM",
+    "specs": {
+      "sizeInch": "8\"",
+      "sizeMM": "200MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 24,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S40 CAP",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "200MM",
+    "specs": {
+      "sizeInch": "8\"",
+      "sizeMM": "200MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 25,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S40 CAP",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150MM",
+    "specs": {
+      "sizeInch": "6\"",
+      "sizeMM": "150MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150MM",
+    "specs": {
+      "sizeInch": "6\"",
+      "sizeMM": "150MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 26,
+    "isActive": true
+  },
+  {
+    "name": "MS S/O ISS FLANGE",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "80MM",
+    "specs": {
+      "sizeInch": "3\"",
+      "sizeMM": "80MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 27,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW 90 DEG",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "200MM",
+    "specs": {
+      "sizeInch": "8\"",
+      "sizeMM": "200MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 28,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW 90 DEG",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150MM",
+    "specs": {
+      "sizeInch": "6\"",
+      "sizeMM": "150MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 28,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW 90 DEG",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "100MM",
+    "specs": {
+      "sizeInch": "4\"",
+      "sizeMM": "100MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 28,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW 90 DEG",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "80MM",
+    "specs": {
+      "sizeInch": "3\"",
+      "sizeMM": "80MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 28,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW 90 DEG",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "65MM",
+    "specs": {
+      "sizeInch": "2 1/2\"",
+      "sizeMM": "65MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 28,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW 90 DEG",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "50MM",
+    "specs": {
+      "sizeInch": "2\"",
+      "sizeMM": "50MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 28,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW 90 DEG",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "40MM",
+    "specs": {
+      "sizeInch": "1 1/2\"",
+      "sizeMM": "40MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 28,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW 90 DEG",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "32MM",
+    "specs": {
+      "sizeInch": "1 1/4\"",
+      "sizeMM": "32MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 28,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W S-40 ELBOW 90 DEG",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25MM",
+    "specs": {
+      "sizeInch": "1\"",
+      "sizeMM": "25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 28,
+    "isActive": true
+  },
+  {
+    "name": "MS E TABLE FLANGE 12MM THK",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "200MM",
+    "specs": {
+      "sizeInch": "8\"",
+      "sizeMM": "200MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 29,
+    "isActive": true
+  },
+  {
+    "name": "MS E TABLE FLANGE 12MM THK",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150MM",
+    "specs": {
+      "sizeInch": "6\"",
+      "sizeMM": "150MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 29,
+    "isActive": true
+  },
+  {
+    "name": "MS E TABLE FLANGE 12MM THK",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "100MM",
+    "specs": {
+      "sizeInch": "4\"",
+      "sizeMM": "100MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 29,
+    "isActive": true
+  },
+  {
+    "name": "MS E TABLE FLANGE 12MM THK",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "80MM",
+    "specs": {
+      "sizeInch": "3\"",
+      "sizeMM": "80MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 29,
+    "isActive": true
+  },
+  {
+    "name": "MS E TABLE FLANGE 12MM THK",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "65MM",
+    "specs": {
+      "sizeInch": "2 1/2\"",
+      "sizeMM": "65MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 29,
+    "isActive": true
+  },
+  {
+    "name": "MS E TABLE FLANGE 12MM THK",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "50MM",
+    "specs": {
+      "sizeInch": "2\"",
+      "sizeMM": "50MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 29,
+    "isActive": true
+  },
+  {
+    "name": "MS E TABLE FLANGE 12MM THK",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "40MM",
+    "specs": {
+      "sizeInch": "1 1/2\"",
+      "sizeMM": "40MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 29,
+    "isActive": true
+  },
+  {
+    "name": "MS E TABLE FLANGE 12MM THK",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "32MM",
+    "specs": {
+      "sizeInch": "1 1/4\"",
+      "sizeMM": "32MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 29,
+    "isActive": true
+  },
+  {
+    "name": "MS E TABLE FLANGE 12MM THK",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25MM",
+    "specs": {
+      "sizeInch": "1\"",
+      "sizeMM": "25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 29,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "40 x 25MM",
+    "specs": {
+      "sizeMM": "40 x 25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 30,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150 x 80MM",
+    "specs": {
+      "sizeInch": "6\" x 3\"",
+      "sizeMM": "150 x 80MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 30,
+    "isActive": true
+  },
+  {
+    "name": "MS B/W REDUCER C CLASS",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "6\" x 5\"",
+    "specs": {
+      "sizeInch": "6\" x 5\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 30,
+    "isActive": true
+  },
+  {
+    "name": "MS SW BSP ELBOIW",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25 x 15MM",
+    "specs": {
+      "sizeInch": "1\" x 1/2\"",
+      "sizeMM": "25 x 15MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 31,
+    "isActive": true
+  },
+  {
+    "name": "MS E TABLE BLIND FLANGE",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "200MM",
+    "specs": {
+      "sizeInch": "8\"",
+      "sizeMM": "200MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 32,
+    "isActive": true
+  },
+  {
+    "name": "MS FLANGE PD 270 x PCD 210",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 33,
+    "isActive": true
+  },
+  {
+    "name": "GI CASTING",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "",
+    "specs": {},
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 34,
+    "isActive": true
+  },
+  {
+    "name": "GI SCH 40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "80MM",
+    "specs": {
+      "sizeInch": "3\"",
+      "sizeMM": "80MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 35,
+    "isActive": true
+  },
+  {
+    "name": "GI SCH 40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25MM",
+    "specs": {
+      "sizeInch": "1\"",
+      "sizeMM": "25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "GI SCH 40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "32MM",
+    "specs": {
+      "sizeInch": "1 1/4\"",
+      "sizeMM": "32MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "GI SCH 40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "40MM",
+    "specs": {
+      "sizeInch": "1 1/2\"",
+      "sizeMM": "40MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "GI SCH 40 ELBOW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "65MM",
+    "specs": {
+      "sizeInch": "2 1/2\"",
+      "sizeMM": "65MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "GI FLANGE",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "100MM",
+    "specs": {
+      "sizeInch": "4\"",
+      "sizeMM": "100MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 36,
+    "isActive": true
+  },
+  {
+    "name": "GI FLANGE",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "50MM",
+    "specs": {
+      "sizeInch": "2\"",
+      "sizeMM": "50MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "GI END CAP",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150MM",
+    "specs": {
+      "sizeInch": "6\"",
+      "sizeMM": "150MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 37,
+    "isActive": true
+  },
+  {
+    "name": "GI REDUCER",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150 x 80MM",
+    "specs": {
+      "sizeInch": "6\" x 3\"",
+      "sizeMM": "150 x 80MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 38,
+    "isActive": true
+  },
+  {
+    "name": "GI REDUCER",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "50 X40MM",
+    "specs": {
+      "sizeMM": "50 X40MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 38,
+    "isActive": true
+  },
+  {
+    "name": "GI REDUCER",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "40 X25MM",
+    "specs": {
+      "sizeMM": "40 X25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 38,
+    "isActive": true
+  },
+  {
+    "name": "GI REDUCER",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "65 x 40MM",
+    "specs": {
+      "sizeMM": "65 x 40MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 38,
+    "isActive": true
+  },
+  {
+    "name": "FLANGE FOR PUMP ROOM",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "OD 235 x ID 100 x PCD 180",
+    "specs": {
+      "sizeMM": "OD 235 x ID 100 x PCD 180"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 39,
+    "isActive": true
+  },
+  {
+    "name": "FLANGE FOR PUMP ROOM",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "OD 270 x ID 125 x PCD 110",
+    "specs": {
+      "sizeMM": "OD 270 x ID 125 x PCD 110"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 39,
+    "isActive": true
+  },
+  {
+    "name": "FLANGE FOR PUMP ROOM",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "OD 150 x ID 40 x PCD 115",
+    "specs": {
+      "sizeMM": "OD 150 x ID 40 x PCD 115"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 39,
+    "isActive": true
+  },
+  {
+    "name": "130 PCD MATCHING FLANGE (PUMP)",
+    "category": "Pipe Fittings",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 40,
+    "isActive": true
+  },
+  {
+    "name": "MS SCH 40 END CAP",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "200MM",
+    "specs": {
+      "sizeInch": "8\"",
+      "sizeMM": "200MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 41,
+    "isActive": true
+  },
+  {
+    "name": "MS SCH 40 END CAP",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150MM",
+    "specs": {
+      "sizeInch": "6\"",
+      "sizeMM": "150MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "COUPLING",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25MM",
+    "specs": {
+      "sizeInch": "1\"",
+      "sizeMM": "25MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 42,
+    "isActive": true
+  },
+  {
+    "name": "COUPLING",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "15MM",
+    "specs": {
+      "sizeInch": "1/2\"",
+      "sizeMM": "15MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "ORIFACE PLATE OD 160",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 43,
+    "isActive": true
+  },
+  {
+    "name": "ORIFACE PLATE OD 140",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "DUMMY PLATE",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "80MM",
+    "specs": {
+      "sizeMM": "80MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 44,
+    "isActive": true
+  },
+  {
+    "name": "BARREL NIPPLE",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25 X200mm",
+    "specs": {
+      "sizeMM": "25 X200mm"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 45,
+    "isActive": true
+  },
+  {
+    "name": "BARREL NIPPLE",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25 X300mm",
+    "specs": {
+      "sizeMM": "25 X300mm"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "GI ELBOW SW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25 x 15MM",
+    "specs": {
+      "sizeMM": "25 x 15MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 46,
+    "isActive": true
+  },
+  {
+    "name": "GI FORGE ELBOW",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25 x 15MM",
+    "specs": {
+      "sizeMM": "25 x 15MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "MS FLANGE 105 PCD",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 47,
+    "isActive": true
+  },
+  {
+    "name": "MS END CAP",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "150MM",
+    "specs": {
+      "sizeMM": "150MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "MS FLANGE SILIPON THK 18MM",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "OD 220 x PCD 180 x 100 MM",
+    "specs": {
+      "sizeMM": "OD 220 x PCD 180 x 100 MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 48,
+    "isActive": true
+  },
+  {
+    "name": "MS FLANGE SILIPON THK 18MM",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "OD 200 x PCD 160 x 80 MM",
+    "specs": {
+      "sizeMM": "OD 200 x PCD 160 x 80 MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 48,
+    "isActive": true
+  },
+  {
+    "name": "MS FLANGE SILIPON THK 18MM",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "OD 150 x PCD 110 x 40 MM",
+    "specs": {
+      "sizeMM": "OD 150 x PCD 110 x 40 MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 48,
+    "isActive": true
+  },
+  {
+    "name": "MS COUPLING",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "20MM",
+    "specs": {
+      "sizeInch": "3/4\"",
+      "sizeMM": "20MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "ISI FLANGE 80 PCD 160",
+    "category": "Pipe Fittings",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "3\"",
+    "specs": {
+      "sizeInch": "3\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 50,
+    "isActive": true
+  },
+  {
+    "name": "Flexible Hose Dropper",
+    "category": "Pipe Fittings",
+    "make": "Non Ul",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1/2\" x 500MM",
+    "specs": {
+      "sizeInch": "1/2\" x 500MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "Flexible Hose Dropper",
+    "category": "Pipe Fittings",
+    "make": "Non Ul",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1/2\" x 700MM",
+    "specs": {
+      "sizeInch": "1/2\" x 700MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Flexible Hose Dropper",
+    "category": "Pipe Fittings",
+    "make": "Non Ul",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1/2\" x 1000MM",
+    "specs": {
+      "sizeInch": "1/2\" x 1000MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Flexible Hose Dropper",
+    "category": "Pipe Fittings",
+    "make": "Non Ul",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1/2\" x 1200MM",
+    "specs": {
+      "sizeInch": "1/2\" x 1200MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Flexible Hose Dropper",
+    "category": "Pipe Fittings",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1 MTR",
+    "specs": {
+      "sizeMM": "1 MTR"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 2,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "1\"",
+    "specs": {
+      "sizeInch": "1\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": 3,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "1 1/4\"",
+    "specs": {
+      "sizeInch": "1 1/4\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "1 1/2\"",
+    "specs": {
+      "sizeInch": "1 1/2\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "2\"",
+    "specs": {
+      "sizeInch": "2\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "3\"",
+    "specs": {
+      "sizeInch": "3\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "2 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "4\"",
+    "specs": {
+      "sizeInch": "4\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "6\"",
+    "specs": {
+      "sizeInch": "6\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "10MM",
+    "specs": {
+      "sizeMM": "10MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "8MM",
+    "specs": {
+      "sizeMM": "8MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Washer",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "8MM",
+    "specs": {
+      "sizeMM": "8MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Washer",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "10MM",
+    "specs": {
+      "sizeMM": "10MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Washer",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "8MM",
+    "specs": {
+      "sizeMM": "8MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut Bolt",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "5/8\" x 2\"",
+    "specs": {
+      "sizeInch": "5/8\" x 2\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut Bolt",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "5/8\" x 4\"",
+    "specs": {
+      "sizeInch": "5/8\" x 4\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut Bolt",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "5/8\" x 2 1/2\"",
+    "specs": {
+      "sizeInch": "5/8\" x 2 1/2\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut Bolt",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "5/8\" x 5\"",
+    "specs": {
+      "sizeInch": "5/8\" x 5\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut Bolt",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "5/8\" x 6\"",
+    "specs": {
+      "sizeInch": "5/8\" x 6\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut Bolt",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "5/8\" x 3\"",
+    "specs": {
+      "sizeInch": "5/8\" x 3\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hi Tech Rod",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "10MM x 2mtr",
+    "specs": {
+      "sizeMM": "10MM x 2mtr"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hi Tech Rod",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "8MM x 2mtr",
+    "specs": {
+      "sizeMM": "8MM x 2mtr"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Anchor Fastner",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "8MM x 4\"",
+    "specs": {
+      "sizeInch": "8MM x 4\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Anchor Fastner",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "10MM x 4\"",
+    "specs": {
+      "sizeInch": "10MM x 4\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Anchor Fastner ( FISHER)",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "10MM x 3\"",
+    "specs": {
+      "sizeInch": "10MM x 3\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Bullet Fastner (FISHER)",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "8MM",
+    "specs": {
+      "sizeMM": "8MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Bullet Fastner (FISHER)",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "10MM",
+    "specs": {
+      "sizeMM": "10MM"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "U BOLT",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "3/8\" x 3\"",
+    "specs": {
+      "sizeInch": "3/8\" x 3\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "U BOLT",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "3/8\" x 4\"",
+    "specs": {
+      "sizeInch": "3/8\" x 4\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "U BOLT",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "3/8\" x 6\"",
+    "specs": {
+      "sizeInch": "3/8\" x 6\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C.I HOSE NIPPAL",
+    "category": "Pipe Fittings",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "3/4\"",
+    "specs": {
+      "sizeInch": "3/4\""
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "WEDGE BOLT",
+    "category": "Pipe Fittings",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "10 x 75",
+    "specs": {
+      "sizeMM": "10 x 75"
+    },
+    "sheet": "M.S Reducer & Elbow & Flange",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Flexible Hose Dropper",
+    "category": "Hardware & Supports",
+    "make": "Non Ul",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1/2\" x 500MM",
+    "specs": {
+      "sizeInch": "1/2\" x 500MM"
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "Flexible Hose Dropper",
+    "category": "Hardware & Supports",
+    "make": "Non Ul",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1/2\" x 700MM",
+    "specs": {
+      "sizeInch": "1/2\" x 700MM"
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Flexible Hose Dropper",
+    "category": "Hardware & Supports",
+    "make": "Non Ul",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1/2\" x 1000MM",
+    "specs": {
+      "sizeInch": "1/2\" x 1000MM"
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Flexible Hose Dropper",
+    "category": "Hardware & Supports",
+    "make": "Non Ul",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1/2\" x 1200MM",
+    "specs": {
+      "sizeInch": "1/2\" x 1200MM"
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Flexible Hose Dropper",
+    "category": "Hardware & Supports",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1 MTR",
+    "specs": {
+      "sizeMM": "1 MTR"
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": 2,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "1\"",
+    "specs": {
+      "sizeInch": "1\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": 3,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "1 1/4\"",
+    "specs": {
+      "sizeInch": "1 1/4\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "1 1/2\"",
+    "specs": {
+      "sizeInch": "1 1/2\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "2\"",
+    "specs": {
+      "sizeInch": "2\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "3\"",
+    "specs": {
+      "sizeInch": "3\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "2 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "4\"",
+    "specs": {
+      "sizeInch": "4\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hitech Clamp",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "6\"",
+    "specs": {
+      "sizeInch": "6\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "10MM",
+    "specs": {
+      "sizeMM": "10MM"
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "8MM",
+    "specs": {
+      "sizeMM": "8MM"
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Washer",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "8MM",
+    "specs": {
+      "sizeMM": "8MM"
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Washer",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "10MM",
+    "specs": {
+      "sizeMM": "10MM"
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Washer",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "8MM",
+    "specs": {
+      "sizeMM": "8MM"
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut Bolt",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "5/8\" x 2\"",
+    "specs": {
+      "sizeInch": "5/8\" x 2\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut Bolt",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "5/8\" x 4\"",
+    "specs": {
+      "sizeInch": "5/8\" x 4\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut Bolt",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "5/8\" x 2 1/2\"",
+    "specs": {
+      "sizeInch": "5/8\" x 2 1/2\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut Bolt",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "5/8\" x 5\"",
+    "specs": {
+      "sizeInch": "5/8\" x 5\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut Bolt",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "5/8\" x 6\"",
+    "specs": {
+      "sizeInch": "5/8\" x 6\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Nut Bolt",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Kg",
+    "size": "5/8\" x 3\"",
+    "specs": {
+      "sizeInch": "5/8\" x 3\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hi Tech Rod",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "10MM x 2mtr",
+    "specs": {
+      "sizeMM": "10MM x 2mtr"
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Hi Tech Rod",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "8MM x 2mtr",
+    "specs": {
+      "sizeMM": "8MM x 2mtr"
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Anchor Fastner",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "8MM x 4\"",
+    "specs": {
+      "sizeInch": "8MM x 4\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Anchor Fastner",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "10MM x 4\"",
+    "specs": {
+      "sizeInch": "10MM x 4\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Anchor Fastner ( FISHER)",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "10MM x 3\"",
+    "specs": {
+      "sizeInch": "10MM x 3\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Bullet Fastner (FISHER)",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "8MM",
+    "specs": {
+      "sizeMM": "8MM"
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Bullet Fastner (FISHER)",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "10MM",
+    "specs": {
+      "sizeMM": "10MM"
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "U BOLT",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "3/8\" x 3\"",
+    "specs": {
+      "sizeInch": "3/8\" x 3\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "U BOLT",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "3/8\" x 4\"",
+    "specs": {
+      "sizeInch": "3/8\" x 4\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "U BOLT",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "3/8\" x 6\"",
+    "specs": {
+      "sizeInch": "3/8\" x 6\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C.I HOSE NIPPAL",
+    "category": "Hardware & Supports",
+    "make": "GI",
+    "modelNo": "",
+    "unit": "Pc",
+    "size": "3/4\"",
+    "specs": {
+      "sizeInch": "3/4\""
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "WEDGE BOLT",
+    "category": "Hardware & Supports",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "10 x 75",
+    "specs": {
+      "sizeMM": "10 x 75"
+    },
+    "sheet": "HARDWARE FITTING",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "FIRE ALARM PANEL SYSTEM",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "HCF-1004",
+    "unit": "Nos",
+    "size": "4 Zone",
+    "specs": {
+      "zone": 4
+    },
+    "sheet": "Fire Alarm Panel",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "FIRE ALARM PANEL SYSTEM",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "HCF-1002",
+    "unit": "Nos",
+    "size": "2 Zone",
+    "specs": {
+      "zone": 2
+    },
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "FIRE ALARM PANEL SYSTEM",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "HCF-101",
+    "unit": "Nos",
+    "size": "6 Zone",
+    "specs": {
+      "zone": 6
+    },
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "FIRE ALARM PANEL SYSTEM",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "HCF-101",
+    "unit": "Nos",
+    "size": "25 Zone",
+    "specs": {
+      "zone": 25
+    },
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "FIRE ALARM PANEL SYSTEM",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "HCF-101",
+    "unit": "Nos",
+    "size": "22 Zone",
+    "specs": {
+      "zone": 22
+    },
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "FIRE ALARM PANEL SYSTEM",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "HCF-101",
+    "unit": "Nos",
+    "size": "16 Zone",
+    "specs": {
+      "zone": 16
+    },
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "FIRE ALARM PANEL SYSTEM",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "HCF-101",
+    "unit": "Nos",
+    "size": "23 Zone",
+    "specs": {
+      "zone": 23
+    },
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "FIRE ALARM PANEL SYSTEM -PA",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "HCF-105",
+    "unit": "Nos",
+    "size": "23 Zone",
+    "specs": {
+      "zone": 23
+    },
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "FIRE ALARM PANEL SYSTEM -PA",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "HCF-105",
+    "unit": "Nos",
+    "size": "4 Zone",
+    "specs": {
+      "zone": 4
+    },
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "FIRE ALARM PANEL SYSTEM -PA",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "HCF-105",
+    "unit": "Nos",
+    "size": "17 Zone",
+    "specs": {
+      "zone": 17
+    },
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "FIRE ALARM PANEL SYSTEM -PA",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "HCF-105",
+    "unit": "Nos",
+    "size": "7 Zone",
+    "specs": {
+      "zone": 7
+    },
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "CONVENTIONAL COMBINE MCP HOOTER PLATE",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "CONVENTIONAL MCP",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "CONVENTIONAL MCP HOOTER PA BOX-PA",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "CONVENTIONAL MCP HOOTER STD BOX-PA",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "SMOKE DETECTOR",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "COMBINE MCP HOOTER WITH & DETECTOR MODULE PLATE",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "HCF-105",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "COMBINE MCP HOOTER PLATE-PA",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "HCF-105",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "CONVENTIONAL MCP (ABS)",
+    "category": "Fire Alarm Panel",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "Fire Alarm Panel",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "SS working Parts Comercial Body - 4 Way - Plain",
+    "category": "4 Way & Hydrant",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "4 way",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "SS working Parts Comercial Body - 4 Way - Thread",
+    "category": "4 Way & Hydrant",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "4 way",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Four Way",
+    "category": "4 Way & Hydrant",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "4 way",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Short Brach pipe",
+    "category": "4 Way & Hydrant",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "4 way",
+    "srNo": 2,
+    "isActive": true
+  },
+  {
+    "name": "S S SINGLE HYDRANT VALVE",
+    "category": "4 Way & Hydrant",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "4 way",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "S S DOUBLE HYDRANT VALVE",
+    "category": "4 Way & Hydrant",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "4 way",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "S S SINGLE HYDRANT VALVE COMM (NON ISI)",
+    "category": "4 Way & Hydrant",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "4 way",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "4 WAY",
+    "category": "4 Way & Hydrant",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "4 way",
+    "srNo": 5,
+    "isActive": true
+  },
+  {
+    "name": "HYDRENT WHEEL",
+    "category": "4 Way & Hydrant",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "4 way",
+    "srNo": 6,
+    "isActive": true
+  },
+  {
+    "name": "DIS WASHER",
+    "category": "4 Way & Hydrant",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "4 way",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -10 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "2 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -10 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "2\"",
+    "specs": {
+      "sizeInch": "2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -16 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "8\"",
+    "specs": {
+      "sizeInch": "8\""
+    },
+    "sheet": "VALVES",
+    "srNo": 2,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -16 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "6\"",
+    "specs": {
+      "sizeInch": "6\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -16 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "4\"",
+    "specs": {
+      "sizeInch": "4\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -16 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "3\"",
+    "specs": {
+      "sizeInch": "3\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -16 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "2 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -16 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "2\"",
+    "specs": {
+      "sizeInch": "2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -20 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "8\"",
+    "specs": {
+      "sizeInch": "8\""
+    },
+    "sheet": "VALVES",
+    "srNo": 2,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -20 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "6\"",
+    "specs": {
+      "sizeInch": "6\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -20 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "4\"",
+    "specs": {
+      "sizeInch": "4\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -20 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "3\"",
+    "specs": {
+      "sizeInch": "3\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -20 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "2 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -20 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "2\"",
+    "specs": {
+      "sizeInch": "2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -25 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "8\"",
+    "specs": {
+      "sizeInch": "8\""
+    },
+    "sheet": "VALVES",
+    "srNo": 2,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -25 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "6\"",
+    "specs": {
+      "sizeInch": "6\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -25 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "4\"",
+    "specs": {
+      "sizeInch": "4\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -25 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "3\"",
+    "specs": {
+      "sizeInch": "3\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -25 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "2 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Butter Fly P.N -25 Kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "2\"",
+    "specs": {
+      "sizeInch": "2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 16 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "8\"",
+    "specs": {
+      "sizeInch": "8\""
+    },
+    "sheet": "VALVES",
+    "srNo": 3,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 16 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "6\"",
+    "specs": {
+      "sizeInch": "6\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 16 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "4\"",
+    "specs": {
+      "sizeInch": "4\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 16 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "3\"",
+    "specs": {
+      "sizeInch": "3\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 16 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "2 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 16 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "2\"",
+    "specs": {
+      "sizeInch": "2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 20 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "8\"",
+    "specs": {
+      "sizeInch": "8\""
+    },
+    "sheet": "VALVES",
+    "srNo": 5,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 20 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "6\"",
+    "specs": {
+      "sizeInch": "6\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 20 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "4\"",
+    "specs": {
+      "sizeInch": "4\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 20 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "3\"",
+    "specs": {
+      "sizeInch": "3\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 20 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "2 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 20 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "2\"",
+    "specs": {
+      "sizeInch": "2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 25 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "8\"",
+    "specs": {
+      "sizeInch": "8\""
+    },
+    "sheet": "VALVES",
+    "srNo": 5,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 25 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "6\"",
+    "specs": {
+      "sizeInch": "6\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 25 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "4\"",
+    "specs": {
+      "sizeInch": "4\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 25 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "3\"",
+    "specs": {
+      "sizeInch": "3\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 25 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "2 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Dual Plat NRV P.N- 25 kg",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "2\"",
+    "specs": {
+      "sizeInch": "2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Bass Screwed Ball valve",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1/2\"",
+    "specs": {
+      "sizeInch": "1/2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Bass Screwed Ball valve",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1\"",
+    "specs": {
+      "sizeInch": "1\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Bass Screwed Ball valve",
+    "category": "Valves",
+    "make": "ANTICA",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1/2\"",
+    "specs": {
+      "sizeInch": "1/2\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Bass Screwed Ball valve",
+    "category": "Valves",
+    "make": "ANTICA",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "3/4\"",
+    "specs": {
+      "sizeInch": "3/4\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Bass Screwed Ball valve",
+    "category": "Valves",
+    "make": "ANTICA",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1\"",
+    "specs": {
+      "sizeInch": "1\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Foot Valves Flanged",
+    "category": "Valves",
+    "make": "Normex",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "4\"",
+    "specs": {
+      "sizeInch": "4\""
+    },
+    "sheet": "VALVES",
+    "srNo": 8,
+    "isActive": true
+  },
+  {
+    "name": "Foot Valves Flanged",
+    "category": "Valves",
+    "make": "Normex",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "3\"",
+    "specs": {
+      "sizeInch": "3\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Foot Valves Flanged",
+    "category": "Valves",
+    "make": "Normex",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "8\"",
+    "specs": {
+      "sizeInch": "8\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Foot Valves Flanged",
+    "category": "Valves",
+    "make": "Normex",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "6\"",
+    "specs": {
+      "sizeInch": "6\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "PRESSURE GAUGE",
+    "category": "Valves",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "100 x 3/8\" x 0 TO 21KG",
+    "specs": {
+      "sizeInch": "100 x 3/8\" x 0 TO 21KG"
+    },
+    "sheet": "VALVES",
+    "srNo": 9,
+    "isActive": true
+  },
+  {
+    "name": "SYPHONE TUBE",
+    "category": "Valves",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "3/8\"",
+    "specs": {
+      "sizeInch": "3/8\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "SYPHONE COCK",
+    "category": "Valves",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "3/8\"",
+    "specs": {
+      "sizeInch": "3/8\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "BLACK RUBBER SHEET 5MM x 1MTR x 2MTR",
+    "category": "Valves",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "KG",
+    "specs": {},
+    "sheet": "VALVES",
+    "srNo": 10,
+    "isActive": true
+  },
+  {
+    "name": "THERMOPLAST HOSE TYPE-2 20MM",
+    "category": "Valves",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "MTR",
+    "specs": {},
+    "sheet": "VALVES",
+    "srNo": 11,
+    "isActive": true
+  },
+  {
+    "name": "PRESSURE SWITCH KP 36",
+    "category": "Valves",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "PC",
+    "specs": {},
+    "sheet": "VALVES",
+    "srNo": 12,
+    "isActive": true
+  },
+  {
+    "name": "BRASS BUSHING",
+    "category": "Valves",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "3/8\" x 1/2\"",
+    "specs": {
+      "sizeInch": "3/8\" x 1/2\""
+    },
+    "sheet": "VALVES",
+    "srNo": 13,
+    "isActive": true
+  },
+  {
+    "name": "S.S.HOSE CLIP 1A -",
+    "category": "Valves",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25MM",
+    "specs": {},
+    "sheet": "VALVES",
+    "srNo": 15,
+    "isActive": true
+  },
+  {
+    "name": "ANTIVIBRATION RUBBER PAD",
+    "category": "Valves",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "25MM x 1 MTR x 2 MTR",
+    "specs": {},
+    "sheet": "VALVES",
+    "srNo": 16,
+    "isActive": true
+  },
+  {
+    "name": "GM SCREWED AIR RELEASE VALVES",
+    "category": "Valves",
+    "make": "VIPCO",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1\"",
+    "specs": {
+      "sizeInch": "1\""
+    },
+    "sheet": "VALVES",
+    "srNo": 17,
+    "isActive": true
+  },
+  {
+    "name": "BRASS SCREWED TEST & DRAIN VALVES",
+    "category": "Valves",
+    "make": "CASTLE",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1\"",
+    "specs": {
+      "sizeInch": "1\""
+    },
+    "sheet": "VALVES",
+    "srNo": 18,
+    "isActive": true
+  },
+  {
+    "name": "WATERFLOW SWITCH WFS 6000",
+    "category": "Valves",
+    "make": "HONEYWELL",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "1\"",
+    "specs": {
+      "sizeInch": "1\""
+    },
+    "sheet": "VALVES",
+    "srNo": 19,
+    "isActive": true
+  },
+  {
+    "name": "Y' TYPE STRAINER FLANGED PN-16",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "6\"",
+    "specs": {
+      "sizeInch": "6\""
+    },
+    "sheet": "VALVES",
+    "srNo": 20,
+    "isActive": true
+  },
+  {
+    "name": "Y' TYPE STRAINER FLANGED PN-16",
+    "category": "Valves",
+    "make": "C&R",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "8\"",
+    "specs": {
+      "sizeInch": "8\""
+    },
+    "sheet": "VALVES",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Extinguisher Fire ABC type",
+    "category": "Extinguisher",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "9 Kg",
+    "specs": {
+      "weightKg": 9
+    },
+    "sheet": "Extinguisher Fire",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "Extinguisher Fire ABC type",
+    "category": "Extinguisher",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "4 KG",
+    "specs": {
+      "weightKg": 4
+    },
+    "sheet": "Extinguisher Fire",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Extinguisher Fire ABC type",
+    "category": "Extinguisher",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "6 KG",
+    "specs": {
+      "weightKg": 6
+    },
+    "sheet": "Extinguisher Fire",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Fire Bucket with Stand",
+    "category": "Extinguisher",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "Extinguisher Fire",
+    "srNo": 2,
+    "isActive": true
+  },
+  {
+    "name": "M.S. FIRE HOSE BOX SINGLE DOOR WITH RUBBER GLASS FITTING (510 x 510 x 200MM)",
+    "category": "Hose Reel & Box",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "510x510x200MM",
+    "specs": {},
+    "sheet": "Hose Reel & Box",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "M.S. FIRE HOSE REEL DRUM",
+    "category": "Hose Reel & Box",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "Hose Reel & Box",
+    "srNo": 2,
+    "isActive": true
+  },
+  {
+    "name": "M.S. FIRE HOSE REEL DRUM (POWER COATED WITH TYPE II THERMOPLAST HOSE & PVC SHUT OFF NOZZLE)",
+    "category": "Hose Reel & Box",
+    "make": "MS",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "Hose Reel & Box",
+    "srNo": 3,
+    "isActive": true
+  },
+  {
+    "name": "FRP HOSE CABINET (SINGLE DOOR WITH RUBBER GLASS FITTING SIZE 510 x 510 X200mm)",
+    "category": "Hose Reel & Box",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "510x510x200MM",
+    "specs": {},
+    "sheet": "Hose Reel & Box",
+    "srNo": 4,
+    "isActive": true
+  },
+  {
+    "name": "30 + 30 + 5 + 5HP",
+    "category": "Control Panel & Pump",
+    "subCategory": "Contro Panel",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "30 + 30 + 5 + 5HP",
+    "specs": {
+      "panelSpec": "30 + 30 + 5 + 5HP"
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "100 + 75 + 10 +10HP",
+    "category": "Control Panel & Pump",
+    "subCategory": "Contro Panel",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "100 + 75 + 10 +10HP",
+    "specs": {
+      "panelSpec": "100 + 75 + 10 +10HP"
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "100 + 100 + 7.5 + 7.5HP",
+    "category": "Control Panel & Pump",
+    "subCategory": "Contro Panel",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "100 + 100 + 7.5 + 7.5HP",
+    "specs": {
+      "panelSpec": "100 + 100 + 7.5 + 7.5HP"
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "100 + 75 + 7.5 + 10HP",
+    "category": "Control Panel & Pump",
+    "subCategory": "Contro Panel",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "100 + 75 + 7.5 + 10HP",
+    "specs": {
+      "panelSpec": "100 + 75 + 7.5 + 10HP"
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "100 + 75 + 7.5 + 7.5HP + 9BHP",
+    "category": "Control Panel & Pump",
+    "subCategory": "Contro Panel",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "100 + 75 + 7.5 + 7.5HP + 9BHP",
+    "specs": {
+      "panelSpec": "100 + 75 + 7.5 + 7.5HP + 9BHP"
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "75 + 60 + 7.5 + 7.5HP",
+    "category": "Control Panel & Pump",
+    "subCategory": "Contro Panel",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "75 + 60 + 7.5 + 7.5HP",
+    "specs": {
+      "panelSpec": "75 + 60 + 7.5 + 7.5HP"
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "45 + 45 + 5.5 + 5.5HP",
+    "category": "Control Panel & Pump",
+    "subCategory": "Contro Panel",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "45 + 45 + 5.5 + 5.5HP",
+    "specs": {
+      "panelSpec": "45 + 45 + 5.5 + 5.5HP"
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Jocky Pump",
+    "category": "Control Panel & Pump",
+    "subCategory": "Jocky Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "KVM-10098",
+    "unit": "Nos",
+    "size": "180 LPM/90MTR",
+    "specs": {
+      "hp": "6HP",
+      "flowLPM": 180,
+      "headMTR": 90
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Jocky Pump",
+    "category": "Control Panel & Pump",
+    "subCategory": "Jocky Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "KVM-10115",
+    "unit": "Nos",
+    "size": "180 LPM/110MTR",
+    "specs": {
+      "hp": "6HP",
+      "flowLPM": 180,
+      "headMTR": 110
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Jocky Pump",
+    "category": "Control Panel & Pump",
+    "subCategory": "Jocky Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "KVM-10078",
+    "unit": "Nos",
+    "size": "180 LPM/56MTR",
+    "specs": {
+      "hp": "5HP",
+      "flowLPM": 180,
+      "headMTR": 56
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "2900RPM",
+    "category": "Control Panel & Pump",
+    "subCategory": "Jocky Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "KDI-10-16",
+    "unit": "Nos",
+    "size": "7.5HP",
+    "specs": {
+      "hp": "7.5HP"
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Jocky Pump",
+    "category": "Control Panel & Pump",
+    "subCategory": "Jocky Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "KCIL 10-14",
+    "unit": "Nos",
+    "size": "180LPM/85MTR",
+    "specs": {
+      "hp": "7.5HP",
+      "flowLPM": 180,
+      "headMTR": 85
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "MAIN PUMP",
+    "category": "Control Panel & Pump",
+    "subCategory": "MAIN PUMP",
+    "make": "KIRLOSKAR",
+    "modelNo": "DB 80-26 XE",
+    "unit": "Nos",
+    "size": "2400 LPM/85MTR",
+    "specs": {
+      "hp": "75HP",
+      "flowLPM": 2400,
+      "headMTR": 85
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "MAIN PUMP",
+    "category": "Control Panel & Pump",
+    "subCategory": "MAIN PUMP",
+    "make": "KIRLOSKAR",
+    "modelNo": "DB 100-26",
+    "unit": "Nos",
+    "size": "2400 LPM/105MTR",
+    "specs": {
+      "hp": "75HP",
+      "flowLPM": 2400,
+      "headMTR": 105
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "MAIN PUMP",
+    "category": "Control Panel & Pump",
+    "subCategory": "MAIN PUMP",
+    "make": "KIRLOSKAR",
+    "modelNo": "DB 65-20",
+    "unit": "Nos",
+    "size": "1400 LPM/50MTR",
+    "specs": {
+      "hp": "30HP",
+      "flowLPM": 1400,
+      "headMTR": 50
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "MAIN PUMP",
+    "category": "Control Panel & Pump",
+    "subCategory": "MAIN PUMP",
+    "make": "KIRLOSKAR",
+    "modelNo": "DB 80-26",
+    "unit": "Nos",
+    "size": "2400 LPM/100MTR",
+    "specs": {
+      "hp": "100HP",
+      "flowLPM": 2400,
+      "headMTR": 100
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "MAIN PUMP",
+    "category": "Control Panel & Pump",
+    "subCategory": "MAIN PUMP",
+    "make": "KIRLOSKAR",
+    "modelNo": "DB 100-26",
+    "unit": "Nos",
+    "size": "2400 LPM/90MTR",
+    "specs": {
+      "hp": "100HP",
+      "flowLPM": 2400,
+      "headMTR": 90
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "MAIN PUMP",
+    "category": "Control Panel & Pump",
+    "subCategory": "MAIN PUMP",
+    "make": "KIRLOSKAR",
+    "modelNo": "DB 80-26 XE",
+    "unit": "Nos",
+    "size": "2400 LPM/110MTR",
+    "specs": {
+      "hp": "100HP",
+      "flowLPM": 2400,
+      "headMTR": 110
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Sprinkler Pump",
+    "category": "Control Panel & Pump",
+    "subCategory": "Sprinkler Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "DB 80-26 XE",
+    "unit": "Nos",
+    "size": "1800 LPM/85MTR",
+    "specs": {
+      "hp": "60HP",
+      "flowLPM": 1800,
+      "headMTR": 85
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Sprinkler Pump",
+    "category": "Control Panel & Pump",
+    "subCategory": "Sprinkler Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "DB 100-26",
+    "unit": "Nos",
+    "size": "1800 LPM/90MTR",
+    "specs": {
+      "hp": "60HP",
+      "flowLPM": 1800,
+      "headMTR": 90
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Sprinkler Pump",
+    "category": "Control Panel & Pump",
+    "subCategory": "Sprinkler Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "DB 100-26",
+    "unit": "Nos",
+    "size": "1800 LPM/ 90MTR",
+    "specs": {
+      "hp": "75HP",
+      "flowLPM": 1800,
+      "headMTR": 90
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Sprinkler Pump",
+    "category": "Control Panel & Pump",
+    "subCategory": "Sprinkler Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "DB 80-26 XE",
+    "unit": "Nos",
+    "size": "1800 LPM/ 110MTR",
+    "specs": {
+      "hp": "75HP",
+      "flowLPM": 1800,
+      "headMTR": 110
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Sprinkler Pump",
+    "category": "Control Panel & Pump",
+    "subCategory": "Sprinkler Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "DB 100-26",
+    "unit": "Nos",
+    "size": "1800 LPM/ 105MTR",
+    "specs": {
+      "hp": "75HP",
+      "flowLPM": 1800,
+      "headMTR": 105
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "5 HP",
+    "category": "Control Panel & Pump",
+    "subCategory": "Booster Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "5HP",
+    "specs": {
+      "hp": "5HP"
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "6HP",
+    "category": "Control Panel & Pump",
+    "subCategory": "Booster Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "6HP",
+    "specs": {
+      "hp": "6HP"
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "7.5HP",
+    "category": "Control Panel & Pump",
+    "subCategory": "Booster Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "7.5HP",
+    "specs": {
+      "hp": "7.5HP"
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "10HP",
+    "category": "Control Panel & Pump",
+    "subCategory": "Booster Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "KDI 1040",
+    "unit": "Nos",
+    "size": "10HP",
+    "specs": {
+      "hp": "10HP"
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "15HP",
+    "category": "Control Panel & Pump",
+    "subCategory": "Booster Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "KDI 1555",
+    "unit": "Nos",
+    "size": "15HP",
+    "specs": {
+      "hp": "15HP"
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "ENGINE Pump",
+    "category": "Control Panel & Pump",
+    "subCategory": "ENGINE Pump",
+    "make": "KIRLOSKAR",
+    "modelNo": "GK 80-40B",
+    "unit": "Nos",
+    "size": "2400 LPM/105MTR",
+    "specs": {
+      "hp": "97BHP",
+      "flowLPM": 2400,
+      "headMTR": 105
+    },
+    "sheet": "Control Panel & Pump",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "SS 304 Single hydrent valve",
+    "category": "NewAge",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "NewAge",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "SS 304 Double hydrent valve",
+    "category": "NewAge",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "NewAge",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Canvas Hose Pipe 15mtr long with aluminium coupling",
+    "category": "NewAge",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "NewAge",
+    "srNo": 2,
+    "isActive": true
+  },
+  {
+    "name": "UL Listed Side Throw Sprinkler -79 Degree",
+    "category": "NewAge",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "NewAge",
+    "srNo": 3,
+    "isActive": true
+  },
+  {
+    "name": "UL Listed Side Throw Sprinkler -68 Degree",
+    "category": "NewAge",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "NewAge",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "UL Listed Pendent Sprinkler -68 Degree",
+    "category": "NewAge",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "NewAge",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "UL Listed Concealed Sprinkler -68 Degree",
+    "category": "NewAge",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "NewAge",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "SS working Parts Comercial Body - 4 Way - Plain",
+    "category": "NewAge",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "NewAge",
+    "srNo": 4,
+    "isActive": true
+  },
+  {
+    "name": "SS working Parts Comercial Body-4 Way -Thread- NRV type",
+    "category": "NewAge",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "NewAge",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Flexible Dropper - 1 mtr",
+    "category": "NewAge",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "NewAge",
+    "srNo": 5,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire Sprinkler Pipe 3 mtr",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "2\"",
+    "specs": {
+      "sizeInch": "2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire Sprinkler Pipe 3 mtr",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 1/2\"",
+    "specs": {
+      "sizeInch": "1 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire Sprinkler Pipe 3 mtr",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1\"",
+    "specs": {
+      "sizeInch": "1\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire Sprinkler Pipe 3 mtr",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "2 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire Sprinkler Pipe 3 mtr",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 1/4\"",
+    "specs": {
+      "sizeInch": "1 1/4\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Elbow (90 Deg)",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "2\"",
+    "specs": {
+      "sizeInch": "2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": 2,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Elbow (90 Deg)",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 1/2\"",
+    "specs": {
+      "sizeInch": "1 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Elbow (90 Deg)",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1\"",
+    "specs": {
+      "sizeInch": "1\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Elbow (90 Deg)",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 1/4\"",
+    "specs": {
+      "sizeInch": "1 1/4\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Elbow (90 Deg)",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "2 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Female Elbow",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 x 1/2\"",
+    "specs": {
+      "sizeInch": "1 x 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": 3,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S R/Tee",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 1/2 x 1\"",
+    "specs": {
+      "sizeInch": "1 1/2 x 1\""
+    },
+    "sheet": "PVC Material",
+    "srNo": 4,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Tee",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 1/2\"",
+    "specs": {
+      "sizeInch": "1 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Female Tee",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 1/2 x 1/2\"",
+    "specs": {
+      "sizeInch": "1 1/2 x 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S R/Tee",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "2 1/2 x 1\"",
+    "specs": {
+      "sizeInch": "2 1/2 x 1\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Tee",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "2 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Tee",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1\"",
+    "specs": {
+      "sizeInch": "1\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S R/Tee",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "2 1/2 x 1 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2 x 1 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S R/Tee",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 1/2 x 1 1/4\"",
+    "specs": {
+      "sizeInch": "1 1/2 x 1 1/4\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Flange",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "2\"",
+    "specs": {
+      "sizeInch": "2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": 5,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Flange",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "2 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S R/Bushing",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 1/2 x 2\"",
+    "specs": {
+      "sizeInch": "1 1/2 x 2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": 6,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S R/Bushing",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 1/2 x 1\"",
+    "specs": {
+      "sizeInch": "1 1/2 x 1\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S R/Bushing",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 1/2 x 1 1/4\"",
+    "specs": {
+      "sizeInch": "1 1/2 x 1 1/4\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S R/Bushing",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 1/4 x 1\"",
+    "specs": {
+      "sizeInch": "1 1/4 x 1\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S R/Bushing",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "2 1/2 x 1 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2 x 1 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Coupler",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 1/2\"",
+    "specs": {
+      "sizeInch": "1 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": 7,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Coupler",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "2\"",
+    "specs": {
+      "sizeInch": "2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Coupler",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "2 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Female Coupler",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 x 1/2\"",
+    "specs": {
+      "sizeInch": "1 x 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Coupler",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1 1/4\"",
+    "specs": {
+      "sizeInch": "1 1/4\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S Coupler",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "1\"",
+    "specs": {
+      "sizeInch": "1\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S R/Socket",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "2 x 1 1/2\"",
+    "specs": {
+      "sizeInch": "2 x 1 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": 8,
+    "isActive": true
+  },
+  {
+    "name": "C PVC Fire/S R/Socket",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Pcs",
+    "size": "2 1/2 x 1 1/2\"",
+    "specs": {
+      "sizeInch": "2 1/2 x 1 1/2\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "PVC Jet & Spray Nozzel",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "PVC Material",
+    "srNo": 9,
+    "isActive": true
+  },
+  {
+    "name": "PVC Jet & Spray Nozzel",
+    "category": "PVC Material",
+    "make": "PVC",
+    "modelNo": "",
+    "unit": "Nos",
+    "size": "",
+    "specs": {},
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "PVC Pipe Type-2",
+    "category": "PVC Material",
+    "make": "",
+    "modelNo": "",
+    "unit": "Mtr",
+    "size": "3/4\"",
+    "specs": {
+      "sizeInch": "3/4\""
+    },
+    "sheet": "PVC Material",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Red Paint",
+    "category": "Paint",
+    "make": "Berger",
+    "modelNo": "",
+    "unit": "Ltr",
+    "size": "20 Ltr",
+    "specs": {
+      "liters": 20
+    },
+    "sheet": "PAINT",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "Red Paint",
+    "category": "Paint",
+    "make": "Asian",
+    "modelNo": "",
+    "unit": "Ltr",
+    "size": "4 Ltr",
+    "specs": {
+      "liters": 4
+    },
+    "sheet": "PAINT",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "Black Japan",
+    "category": "Paint",
+    "make": "ASIAN",
+    "modelNo": "",
+    "unit": "Ltr",
+    "size": "5 Ltr",
+    "specs": {
+      "liters": 5
+    },
+    "sheet": "PAINT",
+    "srNo": 5,
+    "isActive": true
+  },
+  {
+    "name": "Primer Yellow Zinc",
+    "category": "Paint",
+    "make": "BERGER",
+    "modelNo": "",
+    "unit": "Ltr",
+    "size": "20 Ltr",
+    "specs": {
+      "liters": 20
+    },
+    "sheet": "PAINT",
+    "srNo": 6,
+    "isActive": true
+  },
+  {
+    "name": "Primer Yellow Zinc",
+    "category": "Paint",
+    "make": "Asian",
+    "modelNo": "",
+    "unit": "Ltr",
+    "size": "4 Ltr",
+    "specs": {
+      "liters": 4
+    },
+    "sheet": "PAINT",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "4 CORE x 1.5.SQMM (FRLS)",
+    "category": "Cable",
+    "subCategory": "COPPER ARMOND CABLE",
+    "make": "FRLS-ARMOND CABLE",
+    "modelNo": "",
+    "unit": "Mtr",
+    "size": "4C x 1.5 SQ",
+    "specs": {
+      "cableType": "COPPER ARMOND CABLE"
+    },
+    "sheet": "CABLE",
+    "srNo": 1,
+    "isActive": true
+  },
+  {
+    "name": "2 CORE x 1.5 SQMM",
+    "category": "Cable",
+    "subCategory": "COPPER ARMOND CABLE",
+    "make": "ARMOND CABLE",
+    "modelNo": "",
+    "unit": "Mtr",
+    "size": "2C x 1.5",
+    "specs": {
+      "cableType": "COPPER ARMOND CABLE"
+    },
+    "sheet": "CABLE",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "3 CORE x 4 SQMM",
+    "category": "Cable",
+    "subCategory": "COPPER ARMOND CABLE",
+    "make": "ARMOND CABLE",
+    "modelNo": "",
+    "unit": "Mtr",
+    "size": "3C x 4",
+    "specs": {
+      "cableType": "COPPER ARMOND CABLE"
+    },
+    "sheet": "CABLE",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "4 CORE x 6 SQMM",
+    "category": "Cable",
+    "subCategory": "COPPER ARMOND CABLE",
+    "make": "ARMOND CABLE",
+    "modelNo": "",
+    "unit": "Mtr",
+    "size": "4C x 6",
+    "specs": {
+      "cableType": "COPPER ARMOND CABLE"
+    },
+    "sheet": "CABLE",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "3 CORE x 1.5 SQMM",
+    "category": "Cable",
+    "subCategory": "COPPER UNARMOND CABLE FLEXIBLE",
+    "make": "FLEXIBLE",
+    "modelNo": "",
+    "unit": "Mtr",
+    "size": "3C x 1.5",
+    "specs": {
+      "cableType": "COPPER UNARMOND CABLE FLEXIBLE"
+    },
+    "sheet": "CABLE",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "2 CORE x 1.5 SQMM",
+    "category": "Cable",
+    "subCategory": "COPPER UNARMOND CABLE FLEXIBLE",
+    "make": "FLEXIBLE",
+    "modelNo": "",
+    "unit": "Mtr",
+    "size": "2C x 1.5",
+    "specs": {
+      "cableType": "COPPER UNARMOND CABLE FLEXIBLE"
+    },
+    "sheet": "CABLE",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "3 CORE x 25SQMM",
+    "category": "Cable",
+    "subCategory": "COPPER UNARMOND CABLE FLEXIBLE",
+    "make": "ARD POLYCABLE",
+    "modelNo": "",
+    "unit": "Mtr",
+    "size": "3C x 25",
+    "specs": {
+      "cableType": "COPPER UNARMOND CABLE FLEXIBLE"
+    },
+    "sheet": "CABLE",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "3 CORE X 1.5 SQMM",
+    "category": "Cable",
+    "subCategory": "COPPER UNARMOND CABLE FLEXIBLE",
+    "make": "FLEXIBLE/POLYCAB",
+    "modelNo": "",
+    "unit": "Mtr",
+    "size": "3C x 1.5",
+    "specs": {
+      "cableType": "COPPER UNARMOND CABLE FLEXIBLE"
+    },
+    "sheet": "CABLE",
+    "srNo": null,
+    "isActive": true
+  },
+  {
+    "name": "2 CORE X 1SQMM",
+    "category": "Cable",
+    "subCategory": "COPPER UNARMOND CABLE FLEXIBLE",
+    "make": "FLEXIBLE/POLYCAB",
+    "modelNo": "",
+    "unit": "Mtr",
+    "size": "2C x 1",
+    "specs": {
+      "cableType": "COPPER UNARMOND CABLE FLEXIBLE"
+    },
+    "sheet": "CABLE",
+    "srNo": null,
+    "isActive": true
+  }
+]

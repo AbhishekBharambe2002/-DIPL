@@ -65,7 +65,7 @@ export async function withAuth(
 
 export function parsePaginationParams(searchParams: URLSearchParams) {
   const page = Math.max(1, parseInt(searchParams.get("page") || "1", 10));
-  const limit = Math.min(100, Math.max(1, parseInt(searchParams.get("limit") || "20", 10)));
+  const limit = Math.min(500, Math.max(1, parseInt(searchParams.get("limit") || "20", 10)));
   const sort = searchParams.get("sort") || "-createdAt";
   const search = searchParams.get("search") || "";
 

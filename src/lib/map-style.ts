@@ -1,13 +1,7 @@
-// Set NEXT_PUBLIC_MAP_STYLE_URL (and optionally _DARK) to a hosted style that includes your key,
-// e.g. https://api.maptiler.com/maps/streets-v2/style.json?key=YOUR_KEY
-const LIGHT_URL = process.env.NEXT_PUBLIC_MAP_STYLE_URL;
-const DARK_URL = process.env.NEXT_PUBLIC_MAP_STYLE_URL_DARK || LIGHT_URL;
+// Free OpenStreetMap tiles by default. To use a keyed provider, set NEXT_PUBLIC_MAP_TILE_URL to a
+// raster template, e.g. https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=YOUR_KEY
+export const TILE_URL = process.env.NEXT_PUBLIC_MAP_TILE_URL || "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 
-const FREE = {
-  light: "https://tiles.openfreemap.org/styles/positron",
-  dark: "https://tiles.openfreemap.org/styles/dark",
-};
-
-export function mapStyle(theme: "light" | "dark"): string {
-  return (theme === "dark" ? DARK_URL : LIGHT_URL) || FREE[theme];
-}
+export const TILE_ATTRIBUTION =
+  process.env.NEXT_PUBLIC_MAP_TILE_ATTRIBUTION ||
+  '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> contributors';

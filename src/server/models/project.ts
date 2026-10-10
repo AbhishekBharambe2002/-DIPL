@@ -17,6 +17,8 @@ export interface IProject extends Document {
   priority: Priority;
   budget?: number;
   location?: string;
+  latitude?: number;
+  longitude?: number;
   progress: number;
   notes?: string;
   isDeleted: boolean;
@@ -50,6 +52,8 @@ const ProjectSchema = new Schema<IProject>(
     },
     budget: { type: Number },
     location: { type: String, trim: true },
+    latitude: { type: Number, min: -90, max: 90 },
+    longitude: { type: Number, min: -180, max: 180 },
     progress: { type: Number, default: 0, min: 0, max: 100 },
     notes: { type: String },
     isDeleted: { type: Boolean, default: false },
@@ -62,6 +66,9 @@ ProjectSchema.index({ status: 1 });
 ProjectSchema.index({ customer: 1 });
 ProjectSchema.index({ isDeleted: 1, status: 1 });
 ProjectSchema.index({ name: "text", projectId: "text" });
+
+// In dev, hot reload re-runs this file; drop the cached model so schema changes apply without a restart.
+if (process.env.NODE_ENV !== "production" && mongoose.models.Project) mongoose.deleteModel("Project");
 
 export const Project =
   mongoose.models.Project || mongoose.model<IProject>("Project", ProjectSchema);

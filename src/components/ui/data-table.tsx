@@ -17,6 +17,7 @@ interface DataTableProps<T> {
   keyField?: string;
   loading?: boolean;
   emptyMessage?: string;
+  onRowClick?: (row: T) => void;
   pagination?: {
     page: number;
     pages: number;
@@ -31,6 +32,7 @@ export function DataTable<T extends object>({
   keyField = "_id",
   loading,
   emptyMessage = "No data found",
+  onRowClick,
   pagination,
 }: DataTableProps<T>) {
   return (
@@ -67,7 +69,8 @@ export function DataTable<T extends object>({
               data.map((row, i) => (
                 <tr
                   key={((row as Record<string, unknown>)[keyField] as string) || i}
-                  className="hover:bg-paper-100/80 transition-colors"
+                  onClick={onRowClick ? () => onRowClick(row) : undefined}
+                  className={clsx("hover:bg-paper-100/80 transition-colors", onRowClick && "cursor-pointer")}
                 >
                   {columns.map((col) => (
                     <td key={col.key} className={clsx("td", col.className)}>

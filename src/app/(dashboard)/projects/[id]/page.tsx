@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { clsx } from "clsx";
-import { ArrowLeft, ArrowUpRight, Pencil, Plus, Receipt } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, PackageSearch, Pencil, Plus, Receipt } from "lucide-react";
 import { SectionHeader } from "@/components/ui/page-header";
 import { KpiCard } from "@/components/ui/kpi-card";
 import { Button } from "@/components/ui/button";
@@ -18,6 +18,8 @@ import { apiFetch, apiPost } from "@/hooks/use-api";
 import { inr, inrShort, qty, shortDate } from "@/lib/format";
 import type { MaterialRow, ProjectEconomics } from "@/server/services/project-economics";
 import { ProjectFormModal, type ProjectInput } from "../project-form";
+import { RequirementModal, type RequirementMaterial } from "@/components/projects/requirement-modal";
+import { MaterialArrivedButton } from "@/components/projects/material-arrived-button";
 
 interface Overview {
   project: ProjectInput & {
@@ -198,9 +200,10 @@ function BoqModal({ open, projectId, onClose, onSaved }: { open: boolean; projec
 export default function ProjectDetailPage() {
   const { id } = useParams<{ id: string }>();
   const canEdit = usePermission("project.edit");
+  const canIssue = usePermission("inventory.issue");
   const [d, setD] = useState<Overview | null>(null);
   const [error, setError] = useState("");
-  const [modal, setModal] = useState<"edit" | "cost" | "boq" | null>(null);
+  const [modal, setModal] = useState<"edit" | "cost" | "boq" | "requirement" | null>(null);
 
   const load = useCallback(() => {
     apiFetch(`/api/projects/${id}/overview`).then((j) =>
@@ -220,6 +223,17 @@ export default function ProjectDetailPage() {
     }
     return [...map.entries()];
   }, [d]);
+
+  // Expected materials from the Material catalogue — the only ones that can
+  // actually be dispatched out of inventory (the Requirement dialog now sends
+  // straight to Dispatch, not Raise PO).
+  const requirementMaterials: RequirementMaterial[] = useMemo(
+    () =>
+      (d?.materials ?? [])
+        .filter((m) => m.source === "material")
+        .map((m) => ({ productId: m.productId, sku: m.sku, name: m.name, unit: m.unit, rate: m.rate })),
+    [d]
+  );
 
   if (error === "notfound")
     return (
@@ -366,11 +380,24 @@ export default function ProjectDetailPage() {
       <section>
         <SectionHeader
           title="Material position"
-          description="Allocated is what left the warehouse for this project. Consumed is what was used. The balance is stock physically at site today."
+          description="Expected is what the job was planned to need. Allocated left the warehouse for it, consumed was used, and the balance is physically at site today."
           actions={
-            <Link href="/inventory/stock-movements" className="link text-[12.5px] inline-flex items-center gap-1">
-              Stock ledger <ArrowUpRight className="h-3.5 w-3.5" />
-            </Link>
+            <div className="flex items-center gap-3">
+              {canEdit && (
+                <Button variant="secondary" size="sm" onClick={() => setModal("edit")}>
+                  <PackageSearch className="h-3.5 w-3.5" /> Expected materials
+                </Button>
+              )}
+              {canIssue && (
+                <Button variant="secondary" size="sm" onClick={() => setModal("requirement")}>
+                  <Plus className="h-3.5 w-3.5" /> Requirement
+                </Button>
+              )}
+              {canIssue && <MaterialArrivedButton projectId={id} onArrived={load} />}
+              <Link href="/inventory/stock-movements" className="link text-[12.5px] inline-flex items-center gap-1">
+                Stock ledger <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
           }
         />
         <div className="card overflow-hidden">
@@ -380,6 +407,7 @@ export default function ProjectDetailPage() {
                 <tr>
                   <th className="th">Material</th>
                   <th className="th text-right">Rate</th>
+                  <th className="th text-right">Expected</th>
                   <th className="th text-right">Allocated</th>
                   <th className="th text-right">Consumed</th>
                   <th className="th text-right">Returned</th>
@@ -390,8 +418,8 @@ export default function ProjectDetailPage() {
               <tbody>
                 {d.materials.length === 0 && (
                   <tr>
-                    <td colSpan={7} className="px-4 py-12 text-center text-[13px] text-ink-400">
-                      Nothing dispatched to this project yet.
+                    <td colSpan={8} className="px-4 py-12 text-center text-[13px] text-ink-400">
+                      No expected or dispatched materials yet.
                     </td>
                   </tr>
                 )}
@@ -405,7 +433,21 @@ export default function ProjectDetailPage() {
                       </div>
                     </td>
                     <td className="tdn text-ink-500">{inr(m.rate)}</td>
-                    <td className="tdn">{qty(m.allocated, m.unit)}</td>
+                    <td className="tdn">
+                      {m.planned ? (
+                        <>
+                          {qty(m.planned, m.unit)}
+                          <div className="mt-1 ml-auto w-20">
+                            <Meter pct={(m.allocated / m.planned) * 100} tone={m.allocated > m.planned ? "neg" : "brand"} />
+                          </div>
+                        </>
+                      ) : (
+                        <span className="text-ink-400">—</span>
+                      )}
+                    </td>
+                    <td className={clsx("tdn", m.planned > 0 && m.allocated > m.planned && "text-neg font-semibold")}>
+                      {m.allocated ? qty(m.allocated, m.unit) : <span className="text-ink-400">—</span>}
+                    </td>
                     <td className="tdn">{qty(m.consumed, m.unit)}</td>
                     <td className="tdn text-ink-500">{m.returned ? qty(m.returned, m.unit) : "—"}</td>
                     <td className="tdn font-medium">{m.balance ? qty(m.balance, m.unit) : "—"}</td>
@@ -418,6 +460,9 @@ export default function ProjectDetailPage() {
                   <tr>
                     <td className="td font-semibold" colSpan={2}>
                       Total
+                    </td>
+                    <td className="tdn font-semibold text-ink-500">
+                      {inr(d.materials.reduce((s, m) => s + m.planned * m.rate, 0))}
                     </td>
                     <td className="tdn font-semibold">{inr(e.materialAllocated)}</td>
                     <td className="tdn font-semibold">{inr(e.materialConsumed)}</td>
@@ -648,6 +693,12 @@ export default function ProjectDetailPage() {
       <ProjectFormModal open={modal === "edit"} project={p} onClose={() => setModal(null)} onSaved={closeAndReload} />
       <CostModal open={modal === "cost"} projectId={id} onClose={() => setModal(null)} onSaved={closeAndReload} />
       <BoqModal open={modal === "boq"} projectId={id} onClose={() => setModal(null)} onSaved={closeAndReload} />
+      <RequirementModal
+        open={modal === "requirement"}
+        onClose={() => setModal(null)}
+        projectId={id}
+        materials={requirementMaterials}
+      />
     </div>
   );
 }

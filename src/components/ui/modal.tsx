@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import { X } from "lucide-react";
 
 interface ModalProps {
@@ -11,17 +11,30 @@ interface ModalProps {
   maxWidth?: string;
 }
 
+// Open modals, innermost last, so Escape only closes the one on top.
+const stack: symbol[] = [];
+
 export function Modal({ open, onClose, title, children, maxWidth = "max-w-lg" }: ModalProps) {
+  const closeRef = useRef(onClose);
+  useEffect(() => {
+    closeRef.current = onClose;
+  });
+
   useEffect(() => {
     if (!open) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    const id = Symbol("modal");
+    stack.push(id);
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && stack[stack.length - 1] === id) closeRef.current();
+    };
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
+      stack.splice(stack.indexOf(id), 1);
+      if (stack.length === 0) document.body.style.overflow = "";
     };
-  }, [open, onClose]);
+  }, [open]);
 
   if (!open) return null;
 

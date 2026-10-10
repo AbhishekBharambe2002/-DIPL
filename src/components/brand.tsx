@@ -24,14 +24,6 @@ function subscribeTheme(cb: () => void) {
   return () => obs.disconnect();
 }
 
-export function useIsDark() {
-  return useSyncExternalStore(
-    subscribeTheme,
-    () => document.documentElement.classList.contains("dark"),
-    () => false
-  );
-}
-
 export function ThemeToggle() {
   const theme = useSyncExternalStore<Theme | null>(
     subscribeTheme,

@@ -159,14 +159,43 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-  .dark .maplibregl-ctrl-group {
+  .leaflet-container {
+    font-family: var(--font-sans);
+    background: rgb(var(--paper-200));
+  }
+  .map-tiles {
+    filter: saturate(0.55) contrast(0.95);
+  }
+  .dark .map-tiles {
+    filter: invert(1) hue-rotate(180deg) brightness(0.92) contrast(0.88) saturate(0.4);
+  }
+  .leaflet-bar,
+  .leaflet-touch .leaflet-bar {
+    border: 1px solid rgb(var(--line)) !important;
+    border-radius: 0 !important;
+    box-shadow: var(--elev-card) !important;
+  }
+  .leaflet-bar a,
+  .leaflet-bar a:hover {
     background: rgb(var(--panel));
+    color: rgb(var(--ink-800));
+    border-bottom-color: rgb(var(--line));
+    border-radius: 0 !important;
   }
-  .dark .maplibregl-ctrl-icon {
-    filter: invert(1) brightness(1.15);
+  .leaflet-bar a:hover {
+    background: rgb(var(--paper-100));
   }
-  .maplibregl-ctrl-attrib {
+  .leaflet-control-attribution {
     font-size: 10px;
+    background: rgb(var(--panel) / 0.85) !important;
+    color: rgb(var(--ink-500));
+  }
+  .leaflet-control-attribution a {
+    color: rgb(var(--link));
+  }
+  .leaflet-marker-icon:focus-visible .site-pin-head {
+    outline: 2px solid rgb(var(--brand-500));
+    outline-offset: 2px;
   }
 
   ::selection {

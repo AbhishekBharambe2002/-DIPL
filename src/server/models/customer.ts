@@ -2,8 +2,8 @@ import mongoose, { Schema, type Document } from "mongoose";
 
 export interface ICustomer extends Document {
   companyName: string;
-  contactPerson: string;
-  phone: string;
+  contactPerson?: string;
+  phone?: string;
   email?: string;
   address?: string;
   city?: string;
@@ -21,8 +21,8 @@ export interface ICustomer extends Document {
 const CustomerSchema = new Schema<ICustomer>(
   {
     companyName: { type: String, required: true, trim: true },
-    contactPerson: { type: String, required: true, trim: true },
-    phone: { type: String, required: true, trim: true },
+    contactPerson: { type: String, trim: true },
+    phone: { type: String, trim: true },
     email: { type: String, lowercase: true, trim: true },
     address: { type: String, trim: true },
     city: { type: String, trim: true },
@@ -39,6 +39,9 @@ const CustomerSchema = new Schema<ICustomer>(
 
 CustomerSchema.index({ companyName: "text", contactPerson: "text" });
 CustomerSchema.index({ isDeleted: 1 });
+
+// In dev, hot reload re-runs this file; drop the cached model so schema changes apply without a restart.
+if (process.env.NODE_ENV !== "production" && mongoose.models.Customer) mongoose.deleteModel("Customer");
 
 export const Customer =
   mongoose.models.Customer || mongoose.model<ICustomer>("Customer", CustomerSchema);
