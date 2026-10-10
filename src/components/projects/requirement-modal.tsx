@@ -15,6 +15,18 @@ export interface RequirementMaterial {
   name: string;
   unit: string;
   rate: number;
+  category?: string;
+}
+
+// Full catalogue record for a material — fetched once so every suggestion can show
+// everything about the item (category, make, model, size), not just its name and code.
+interface CatalogDetail {
+  category?: string;
+  subCategory?: string;
+  make?: string;
+  modelNo?: string;
+  size?: string;
+  available: number;
 }
 
 interface Line {
@@ -49,7 +61,7 @@ export function RequirementModal({
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [highlighted, setHighlighted] = useState(0);
   const [lines, setLines] = useState<Line[]>([]);
-  const [stock, setStock] = useState<Record<string, { qty: number }>>({});
+  const [catalog, setCatalog] = useState<Record<string, CatalogDetail>>({});
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const boxRef = useRef<HTMLDivElement>(null);
@@ -57,7 +69,16 @@ export function RequirementModal({
   useEffect(() => {
     if (!open) return;
     apiFetch("/api/materials?limit=500").then(
-      (j) => j.success && setStock(Object.fromEntries(j.data.map((m: { _id: string; available: number }) => [m._id, { qty: m.available }])))
+      (j) =>
+        j.success &&
+        setCatalog(
+          Object.fromEntries(
+            j.data.map((m: CatalogDetail & { _id: string }) => [
+              m._id,
+              { category: m.category, subCategory: m.subCategory, make: m.make, modelNo: m.modelNo, size: m.size, available: m.available },
+            ])
+          )
+        )
     );
   }, [open]);
 
@@ -123,8 +144,8 @@ export function RequirementModal({
     [lines]
   );
   const shortCount = useMemo(
-    () => lines.filter((l) => (Number(l.quantity) || 0) > (stock[l.productId]?.qty ?? 0)).length,
-    [lines, stock]
+    () => lines.filter((l) => (Number(l.quantity) || 0) > (catalog[l.productId]?.available ?? 0)).length,
+    [lines, catalog]
   );
 
   async function submitRequirement() {
@@ -151,7 +172,7 @@ export function RequirementModal({
   }
 
   return (
-    <Modal open={open} onClose={onClose} title="Add material requirement" maxWidth="max-w-xl">
+    <Modal open={open} onClose={onClose} title="Add material requirement" maxWidth="max-w-3xl">
       <p className="text-[12.5px] text-ink-500 mb-4">
         Only materials already in this project&apos;s Expected Materials can be requested here.
       </p>
@@ -191,28 +212,38 @@ export function RequirementModal({
             )}
 
             {dropdownOpen && results.length > 0 && (
-              <div className="absolute z-10 mt-1 w-full max-h-56 overflow-y-auto card divide-y divide-paper-200 shadow-lg">
-                {results.map((m, i) => (
-                  <button
-                    key={m.productId}
-                    type="button"
-                    onClick={() => addLine(m)}
-                    onMouseEnter={() => setHighlighted(i)}
-                    className={clsx(
-                      "w-full text-left px-3 py-2 flex items-center justify-between gap-3 transition-colors",
-                      i === highlighted ? "bg-paper-200/80" : "hover:bg-paper-100"
-                    )}
-                  >
-                    <div className="min-w-0">
-                      <div className="text-[13px] font-medium text-ink-900 truncate">{m.name}</div>
-                      <div className="text-[11.5px] text-ink-400 font-mono">{m.sku}</div>
-                    </div>
-                    <div className="text-right shrink-0 text-[12px]">
-                      <div className="tnum text-ink-700">{qty(stock[m.productId]?.qty ?? 0, m.unit)} in stock</div>
-                      <div className="tnum text-ink-500">{m.rate ? inr(m.rate) : "no rate"}</div>
-                    </div>
-                  </button>
-                ))}
+              <div className="absolute z-10 mt-1 w-full max-h-96 overflow-y-auto card divide-y divide-paper-200 shadow-lg">
+                {results.map((m, i) => {
+                  const detail = catalog[m.productId];
+                  const specs = [detail?.make, detail?.modelNo, detail?.size].filter(Boolean).join(" · ");
+                  return (
+                    <button
+                      key={m.productId}
+                      type="button"
+                      onClick={() => addLine(m)}
+                      onMouseEnter={() => setHighlighted(i)}
+                      className={clsx(
+                        "w-full text-left px-3 py-2.5 flex items-center justify-between gap-3 transition-colors",
+                        i === highlighted ? "bg-paper-200/80" : "hover:bg-paper-100"
+                      )}
+                    >
+                      <div className="min-w-0">
+                        <div className="text-[13.5px] font-medium text-ink-900 truncate">{m.name}</div>
+                        <div className="mt-0.5 flex flex-wrap items-center gap-x-1.5 text-[11.5px] text-ink-500">
+                          <span className="font-mono text-ink-400">{m.sku}</span>
+                          {(m.category || detail?.category) && <span>· {m.category || detail?.category}</span>}
+                          {detail?.subCategory && <span>· {detail.subCategory}</span>}
+                        </div>
+                        {specs && <div className="mt-0.5 text-[11.5px] text-ink-500">{specs}</div>}
+                        <div className="mt-0.5 text-[11px] text-ink-400">Unit: {m.unit}</div>
+                      </div>
+                      <div className="text-right shrink-0 text-[12px]">
+                        <div className="tnum text-ink-700">{qty(detail?.available ?? 0, m.unit)} in stock</div>
+                        <div className="tnum text-ink-500">{m.rate ? inr(m.rate) : "no rate"}</div>
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
             )}
             {dropdownOpen && search && results.length === 0 && (
@@ -241,8 +272,10 @@ export function RequirementModal({
                 </thead>
                 <tbody>
                   {lines.map((l, i) => {
-                    const stockQty = stock[l.productId]?.qty ?? 0;
+                    const detail = catalog[l.productId];
+                    const stockQty = detail?.available ?? 0;
                     const short = Math.max(0, (Number(l.quantity) || 0) - stockQty);
+                    const specs = [detail?.category, detail?.make, detail?.modelNo, detail?.size].filter(Boolean).join(" · ");
                     return (
                     <tr key={l.productId}>
                       <td className="px-2 py-1.5">
@@ -256,6 +289,7 @@ export function RequirementModal({
                           <div>
                             <div className="text-[12.5px] text-ink-900">{l.name}</div>
                             <div className="text-[11px] text-ink-400 font-mono">{l.sku}</div>
+                            {specs && <div className="text-[11px] text-ink-400">{specs}</div>}
                           </div>
                         </div>
                       </td>

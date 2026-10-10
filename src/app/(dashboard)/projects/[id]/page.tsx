@@ -20,6 +20,7 @@ import type { MaterialRow, ProjectEconomics } from "@/server/services/project-ec
 import { ProjectFormModal, type ProjectInput } from "../project-form";
 import { RequirementModal, type RequirementMaterial } from "@/components/projects/requirement-modal";
 import { MaterialArrivedButton } from "@/components/projects/material-arrived-button";
+import { DownloadReportButton } from "@/components/projects/download-report-button";
 
 interface Overview {
   project: ProjectInput & {
@@ -231,7 +232,7 @@ export default function ProjectDetailPage() {
     () =>
       (d?.materials ?? [])
         .filter((m) => m.source === "material")
-        .map((m) => ({ productId: m.productId, sku: m.sku, name: m.name, unit: m.unit, rate: m.rate })),
+        .map((m) => ({ productId: m.productId, sku: m.sku, name: m.name, unit: m.unit, rate: m.rate, category: m.category })),
     [d]
   );
 
@@ -285,16 +286,19 @@ export default function ProjectDetailPage() {
               {p.expectedCompletionDate && <span>Due {shortDate(p.expectedCompletionDate)}</span>}
             </div>
           </div>
-          {canEdit && (
-            <div className="flex flex-wrap gap-2 shrink-0">
-              <Button variant="secondary" onClick={() => setModal("cost")}>
-                <Receipt className="h-4 w-4" /> Record cost
-              </Button>
-              <Button onClick={() => setModal("edit")}>
-                <Pencil className="h-4 w-4" /> Edit project
-              </Button>
-            </div>
-          )}
+          <div className="flex flex-wrap gap-2 shrink-0">
+            <DownloadReportButton projectId={id} />
+            {canEdit && (
+              <>
+                <Button variant="secondary" onClick={() => setModal("cost")}>
+                  <Receipt className="h-4 w-4" /> Record cost
+                </Button>
+                <Button onClick={() => setModal("edit")}>
+                  <Pencil className="h-4 w-4" /> Edit project
+                </Button>
+              </>
+            )}
+          </div>
         </div>
         <div className="mt-5 card-pad flex items-center gap-4">
           <span className="label shrink-0">Completion</span>

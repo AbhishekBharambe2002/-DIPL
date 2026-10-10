@@ -1,8 +1,9 @@
 import { NextRequest } from "next/server";
 import mongoose from "mongoose";
 import { connectDB } from "@/server/db/connection";
-import { getAuthenticatedUser, errorResponse, successResponse } from "@/lib/api-utils";
+import { getAuthenticatedUser, errorResponse } from "@/lib/api-utils";
 import { getProjectOverviewData } from "@/server/services/project-overview";
+import { buildProjectReportPdf } from "@/server/services/project-report-pdf";
 
 export async function GET(_req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -14,5 +15,15 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ id:
 
   const data = await getProjectOverviewData(id);
   if (!data) return errorResponse("Not found", "NOT_FOUND", 404);
-  return successResponse(data);
+
+  const pdf = await buildProjectReportPdf(data);
+  const fileName = `${data.project.projectId}-report.pdf`.replace(/[^\w.-]+/g, "-");
+
+  return new Response(new Uint8Array(pdf), {
+    headers: {
+      "Content-Type": "application/pdf",
+      "Content-Disposition": `attachment; filename="${fileName}"`,
+      "Content-Length": String(pdf.length),
+    },
+  });
 }
