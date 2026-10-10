@@ -9,13 +9,17 @@ import { getAuthenticatedUser, errorResponse, successResponse } from "@/lib/api-
 import { createAuditLog } from "@/lib/audit";
 
 /**
- * Quick-dispatch: send a material straight from inventory to this project's
- * site. Creates a ProjectSiteLog "dispatch" entry and takes the quantity off
- * the material's quantityToDispatch (what's still available to send out) —
- * quantity (the lifetime total received) is untouched.
+ * Raises a material requirement against this project, or (requestOnly:
+ * false) sends it straight out of inventory.
  *
- * The entry starts "in_transit" — it only counts toward the project's
- * Allocated total once someone confirms delivery (see /api/dispatches/[id]/deliver).
+ * requestOnly true  → logs the need as "requested". Nothing leaves inventory
+ *                      yet; it shows up on the Dispatches page waiting to be
+ *                      sent (see /api/dispatches/[id]/send).
+ * requestOnly false → takes the quantity off the material's
+ *                      quantityToDispatch right away and starts the entry at
+ *                      "in_transit" — it only counts toward the project's
+ *                      Allocated total once delivery is confirmed
+ *                      (see /api/dispatches/[id]/deliver).
  */
 export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -36,9 +40,11 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
   const material = await Material.findById(body.material).lean();
   if (!material) return errorResponse("Material not found", "NOT_FOUND", 404);
 
+  const requestOnly = body.requestOnly === true;
+
   const log = await InventoryLog.findOne({ material: material._id });
   const available = log?.quantityToDispatch ?? 0;
-  if (quantity > available) {
+  if (!requestOnly && quantity > available) {
     return errorResponse(`Only ${available} ${material.unit} available in inventory to dispatch`, "INSUFFICIENT_STOCK", 400);
   }
   const rate = log?.purchasePrice ?? 0;
@@ -53,12 +59,12 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
       rate,
       value: quantity * rate,
       date: new Date(),
-      deliveryStatus: "in_transit",
+      deliveryStatus: requestOnly ? "requested" : "in_transit",
       note: body.note,
       createdBy: user.id,
     });
 
-    if (log) {
+    if (!requestOnly && log) {
       await InventoryLog.updateOne({ _id: log._id }, { $inc: { quantityToDispatch: -quantity } });
     }
 

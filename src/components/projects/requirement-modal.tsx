@@ -28,8 +28,10 @@ interface Line {
 
 /**
  * "Add material requirement" — pick any number of this project's own
- * Expected Materials (nothing outside that list), say how much of each, and
- * dispatch them straight out of inventory to this project's site.
+ * Expected Materials (nothing outside that list) and say how much of each is
+ * needed. This only raises the requirement; it shows up on the Dispatches
+ * page as "requested" and stock doesn't actually leave the warehouse until
+ * someone dispatches it from there.
  */
 export function RequirementModal({
   open,
@@ -49,7 +51,7 @@ export function RequirementModal({
   const [lines, setLines] = useState<Line[]>([]);
   const [stock, setStock] = useState<Record<string, { qty: number }>>({});
   const [error, setError] = useState("");
-  const [dispatching, setDispatching] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const boxRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -125,23 +127,25 @@ export function RequirementModal({
     [lines, stock]
   );
 
-  async function dispatchNow() {
+  async function submitRequirement() {
     if (lines.length === 0) return setError("Add at least one material.");
     if (lines.some((l) => !(Number(l.quantity) > 0)))
       return setError("Every line needs a quantity above zero.");
-    if (lines.some((l) => (Number(l.quantity) || 0) > (stock[l.productId]?.qty ?? 0)))
-      return setError("One or more lines are short of stock — reduce the quantity before dispatching.");
 
-    setDispatching(true);
+    setSubmitting(true);
     setError("");
     for (const l of lines) {
-      const res = await apiPost(`/api/projects/${projectId}/dispatch`, { material: l.productId, quantity: Number(l.quantity) });
+      const res = await apiPost(`/api/projects/${projectId}/dispatch`, {
+        material: l.productId,
+        quantity: Number(l.quantity),
+        requestOnly: true,
+      });
       if (res.success === false) {
-        setDispatching(false);
-        return setError(`${l.name}: ${res.error?.message ?? "could not dispatch"}`);
+        setSubmitting(false);
+        return setError(`${l.name}: ${res.error?.message ?? "could not add"}`);
       }
     }
-    setDispatching(false);
+    setSubmitting(false);
     onClose();
     router.push("/dispatches");
   }
@@ -298,7 +302,7 @@ export function RequirementModal({
                 {shortCount > 0 ? (
                   <span className="inline-flex items-center gap-1.5 text-[12px] text-warn">
                     <AlertTriangle className="h-3.5 w-3.5" />
-                    {shortCount} item{shortCount === 1 ? "" : "s"} short of stock — adjust before dispatching
+                    {shortCount} item{shortCount === 1 ? "" : "s"} short of current stock
                   </span>
                 ) : (
                   <span />
@@ -314,8 +318,8 @@ export function RequirementModal({
             <Button variant="secondary" onClick={onClose}>
               Cancel
             </Button>
-            <Button onClick={dispatchNow} disabled={lines.length === 0 || dispatching}>
-              {dispatching ? "Dispatching…" : "Dispatch"}
+            <Button onClick={submitRequirement} disabled={lines.length === 0 || submitting}>
+              {submitting ? "Adding…" : "Add requirement"}
             </Button>
           </div>
         </div>

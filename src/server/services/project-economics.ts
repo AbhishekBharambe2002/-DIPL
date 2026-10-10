@@ -58,42 +58,70 @@ export interface ProjectEconomics {
 
 type Ids = mongoose.Types.ObjectId[];
 
+interface MaterialAcc {
+  projectId: string;
+  productId: string;
+  sku: string;
+  name: string;
+  unit: string;
+  category: string;
+  rate: number;
+  planned: number;
+  allocated: number;
+  consumed: number;
+  returned: number;
+  source: "product" | "material";
+}
+
+// One project + catalogue code is one row, no matter how many places wrote to it.
+const materialKey = (projectId: string, code: string) => `${projectId}\u0000${code}`;
+
 /**
- * Build material rows from BOTH old ProjectMaterial AND new ProjectSiteLog collections.
- * Old rows come from ProjectMaterial, resolved against whichever catalogue the
- * item actually belongs to — the old Product/SKU master or the 393-item Material
- * catalogue (Expected materials can point at either one).
- * New rows come from ProjectSiteLog → materials (the 393 Excel-imported items).
+ * Build material rows from BOTH old ProjectMaterial AND new ProjectSiteLog collections,
+ * merged by project + catalogue code so the same physical item never appears twice.
+ *
+ * ProjectMaterial carries "planned" (Expected Materials, set from either catalogue) plus
+ * legacy allocated/consumed/returned for items still tracked the old way via StockTransaction.
+ * ProjectSiteLog carries the live dispatch/consumed/returned ledger for the Material
+ * catalogue (the Requirement → Dispatch → Material-arrived flow). The same Material item
+ * can have a planned row in one collection and an allocated row in the other — resolved
+ * against whichever catalogue it actually belongs to and merged by that catalogue's own
+ * code (sku / productId), not by which collection or which _id happened to record it.
  */
 async function materialRows(ids: Ids): Promise<Omit<MaterialRow, "projectCode">[]> {
+  const merged = new Map<string, MaterialAcc>();
+
   // ── Old system: ProjectMaterial, resolved against either catalogue ──
   const oldDocs = await ProjectMaterial.find({ project: { $in: ids } }).lean();
   const catalog = await resolveCatalogItems(oldDocs.map((r) => r.product));
 
-  const result: Omit<MaterialRow, "projectCode">[] = oldDocs
-    .map((r) => {
-      const item = catalog.get(String(r.product));
-      if (!item) return null; // catalogue item was deleted since
-      const rate = item.purchasePrice;
-      const balance = Math.max(0, r.balance);
-      return {
+  for (const r of oldDocs) {
+    const item = catalog.get(String(r.product));
+    if (!item) continue; // catalogue item was deleted since
+    const key = materialKey(String(r.project), item.sku);
+    const acc = merged.get(key);
+    if (acc) {
+      acc.planned += r.planned ?? 0;
+      acc.allocated += r.allocated;
+      acc.consumed += r.consumed;
+      acc.returned += r.returned;
+    } else {
+      merged.set(key, {
         projectId: String(r.project),
         productId: String(r.product),
         sku: item.sku,
         name: item.name,
         unit: item.unit,
         category: item.category,
-        rate,
+        rate: item.purchasePrice,
         planned: r.planned ?? 0,
         allocated: r.allocated,
         consumed: r.consumed,
         returned: r.returned,
-        balance,
-        balanceValue: balance * rate,
         source: item.source,
-      };
-    })
-    .filter((r): r is NonNullable<typeof r> => !!r);
+      });
+    }
+  }
 
   // ── New system: ProjectSiteLog → materials ──
   const newRows = await ProjectSiteLog.aggregate([
@@ -118,26 +146,35 @@ async function materialRows(ids: Ids): Promise<Omit<MaterialRow, "projectCode">[
   ]);
 
   for (const r of newRows) {
-    const balance = Math.max(0, r.allocated - r.consumed - r.returned);
-    result.push({
-      projectId: String(r._id.project),
-      productId: r._id.productId,
-      sku: r._id.productId,
-      name: r.m.name,
-      unit: r.m.unit,
-      category: r.m.category,
-      rate: r.rate,
-      planned: 0,
-      allocated: r.allocated,
-      consumed: r.consumed,
-      returned: r.returned,
-      balance,
-      balanceValue: balance * r.rate,
-      source: "material" as const,
-    });
+    const key = materialKey(String(r._id.project), r._id.productId);
+    const acc = merged.get(key);
+    if (acc) {
+      acc.allocated += r.allocated;
+      acc.consumed += r.consumed;
+      acc.returned += r.returned;
+      if (!acc.rate) acc.rate = r.rate;
+    } else {
+      merged.set(key, {
+        projectId: String(r._id.project),
+        productId: r._id.productId,
+        sku: r._id.productId,
+        name: r.m.name,
+        unit: r.m.unit,
+        category: r.m.category,
+        rate: r.rate,
+        planned: 0,
+        allocated: r.allocated,
+        consumed: r.consumed,
+        returned: r.returned,
+        source: "material" as const,
+      });
+    }
   }
 
-  return result;
+  return [...merged.values()].map((acc) => {
+    const balance = Math.max(0, acc.allocated - acc.consumed - acc.returned);
+    return { ...acc, balance, balanceValue: balance * acc.rate };
+  });
 }
 
 export async function computeEconomics(filter: Record<string, unknown> = {}) {

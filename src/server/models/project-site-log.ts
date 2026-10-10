@@ -21,9 +21,11 @@ export interface IProjectSiteLog extends Document {
   rate: number;                            // per-unit purchase price at the time
   value: number;                           // quantity × rate
   date: Date;                              // when it happened
-  // For "dispatch" entries only — stock leaves the warehouse immediately, but only
-  // counts toward the project's Allocated total once delivery at site is confirmed.
-  deliveryStatus: "in_transit" | "delivered";
+  // For "dispatch" entries only. "requested" = a material requirement was
+  // raised but stock hasn't left the warehouse yet. "in_transit" = stock has
+  // left the warehouse. "delivered" = confirmed arrived at site — the only
+  // stage that counts toward the project's Allocated total.
+  deliveryStatus: "requested" | "in_transit" | "delivered";
   deliveredAt?: Date;
   deliveredBy?: mongoose.Types.ObjectId;
   note?: string;
@@ -46,7 +48,7 @@ const ProjectSiteLogSchema = new Schema<IProjectSiteLog>(
     rate: { type: Number, required: true, default: 0 },
     value: { type: Number, default: 0 },
     date: { type: Date, required: true, default: Date.now },
-    deliveryStatus: { type: String, enum: ["in_transit", "delivered"], default: "delivered" },
+    deliveryStatus: { type: String, enum: ["requested", "in_transit", "delivered"], default: "delivered" },
     deliveredAt: { type: Date },
     deliveredBy: { type: Schema.Types.ObjectId, ref: "User" },
     note: { type: String, trim: true },

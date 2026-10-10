@@ -62,6 +62,9 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
         }
       }
     } else if (order.destination === "project" && order.project) {
+      // The vendor has shipped it, but it still needs someone at site to confirm it actually
+      // arrived — same as a warehouse dispatch. It starts "in_transit" and shows up under
+      // "Material arrived" on the project page (and the pending-deliveries bell) until then.
       const logs = order.lines.map((line: IPrimaryOrderLine) => ({
         project: order.project,
         material: line.material,
@@ -71,6 +74,7 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
         rate: line.rate,
         value: line.quantity * line.rate,
         date: now,
+        deliveryStatus: "in_transit" as const,
         note: `From order ${order.orderNo}`,
         createdBy: user.id,
       }));

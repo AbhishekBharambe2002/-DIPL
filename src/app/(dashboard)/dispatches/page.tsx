@@ -3,14 +3,15 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { clsx } from "clsx";
-import { FolderKanban, List, Plus, Search, ShoppingCart } from "lucide-react";
+import { FolderKanban, List, Plus, Search, Send, ShoppingCart } from "lucide-react";
 import { PageHeader } from "@/components/ui/page-header";
 import { Button } from "@/components/ui/button";
 import { DataTable, type Column } from "@/components/ui/data-table";
 import { Modal } from "@/components/ui/modal";
+import { Chip } from "@/components/ui/status-badge";
 import { NewDispatchModal } from "@/components/inventory/new-dispatch-modal";
 import { MaterialArrivedButton } from "@/components/projects/material-arrived-button";
-import { apiFetch } from "@/hooks/use-api";
+import { apiFetch, apiPatch } from "@/hooks/use-api";
 import { inr, qty, shortDate } from "@/lib/format";
 
 interface Dispatch {
@@ -21,7 +22,7 @@ interface Dispatch {
   value: number;
   date: string;
   note?: string;
-  deliveryStatus?: "in_transit" | "delivered";
+  deliveryStatus?: "requested" | "in_transit" | "delivered";
   project?: { _id: string; projectId: string; name: string };
   material?: { _id: string; name: string; category: string; make?: string; size?: string; unit: string };
   createdBy?: { name: string };
@@ -37,25 +38,27 @@ interface DateGroup {
 
 export default function DispatchesPage() {
   const [searchInput, setSearchInput] = useState("");
-  const [selectedDay, setSelectedDay] = useState<DateGroup | null>(null);
+  const [selectedKey, setSelectedKey] = useState<{ date: string; projectKey: string } | null>(null);
   const [groupByProject, setGroupByProject] = useState(true);
   const [rows, setRows] = useState<Dispatch[]>([]);
   const [loading, setLoading] = useState(true);
   const [dispatching, setDispatching] = useState(false);
-  const [dispatchDefaultProject, setDispatchDefaultProject] = useState("");
-  const [dispatchLockedName, setDispatchLockedName] = useState<string | undefined>(undefined);
-
-  function openDispatch(projectId?: string, projectName?: string) {
-    setDispatchDefaultProject(projectId ?? "");
-    setDispatchLockedName(projectName);
-    setDispatching(true);
-  }
+  const [sending, setSending] = useState(false);
 
   function load() {
     apiFetch("/api/dispatches?limit=100&sort=-date").then((j) => {
       if (j.success) setRows(j.data);
       setLoading(false);
     });
+  }
+
+  async function sendRequested(ids: string[]) {
+    setSending(true);
+    for (const id of ids) {
+      await apiPatch(`/api/dispatches/${id}/send`, {});
+    }
+    setSending(false);
+    load();
   }
 
   useEffect(() => {
@@ -105,6 +108,16 @@ export default function DispatchesPage() {
 
   const flatDays = useMemo(() => byDate(filtered), [filtered]);
 
+  // derived from live data, not a frozen snapshot — so confirming an arrival
+  // from inside the popup is reflected right there, no reopening needed
+  const selectedDay = useMemo(() => {
+    if (!selectedKey) return null;
+    const days = groupByProject
+      ? projectGroups.find((g) => (g.project?._id ?? "unassigned") === selectedKey.projectKey)?.days ?? []
+      : flatDays;
+    return days.find((d) => d.key === selectedKey.date && (d.project?._id ?? "unassigned") === selectedKey.projectKey) ?? null;
+  }, [selectedKey, groupByProject, projectGroups, flatDays]);
+
   const dayColumns: Column<DateGroup>[] = [
     {
       key: "date",
@@ -144,7 +157,7 @@ export default function DispatchesPage() {
         title="Dispatched"
         description="One row per day — tap it to see every material sent out that day."
         actions={
-          <Button onClick={() => openDispatch()}>
+          <Button onClick={() => setDispatching(true)}>
             <Plus className="h-4 w-4" /> Dispatch material
           </Button>
         }
@@ -192,7 +205,7 @@ export default function DispatchesPage() {
           columns={dayColumns}
           data={flatDays}
           emptyMessage="Nothing has been dispatched yet."
-          onRowClick={(g) => setSelectedDay(g)}
+          onRowClick={(g) => setSelectedKey({ date: g.key, projectKey: g.project?._id ?? "unassigned" })}
         />
       ) : projectGroups.length === 0 ? (
         <div className="card-pad text-center text-[13px] text-ink-400">Nothing has been dispatched yet.</div>
@@ -215,25 +228,35 @@ export default function DispatchesPage() {
                   </Link>
                 )}
               </div>
-              <DataTable columns={dayColumns} data={g.days} emptyMessage="" onRowClick={(d) => setSelectedDay(d)} />
+              <DataTable
+                columns={dayColumns}
+                data={g.days}
+                emptyMessage=""
+                onRowClick={(d) => setSelectedKey({ date: d.key, projectKey: d.project?._id ?? "unassigned" })}
+              />
             </section>
           ))}
         </div>
       )}
 
       <Modal
-        open={!!selectedDay}
-        onClose={() => setSelectedDay(null)}
+        open={!!selectedKey}
+        onClose={() => setSelectedKey(null)}
         title={selectedDay ? `Dispatched on ${shortDate(selectedDay.date)}` : "Dispatch detail"}
         maxWidth="max-w-2xl"
       >
         {selectedDay && (
           <div className="space-y-4">
-            {selectedDay.project && (
-              <p className="text-[12.5px] text-ink-500">
-                {selectedDay.project.name} · {selectedDay.rows.length} material{selectedDay.rows.length === 1 ? "" : "s"}
-              </p>
-            )}
+            <div className="flex items-center justify-between gap-3">
+              {selectedDay.project ? (
+                <p className="text-[12.5px] text-ink-500">
+                  {selectedDay.project.name} · {selectedDay.rows.length} material{selectedDay.rows.length === 1 ? "" : "s"}
+                </p>
+              ) : (
+                <span />
+              )}
+              {selectedDay.project && <MaterialArrivedButton projectId={selectedDay.project._id} onArrived={load} />}
+            </div>
             <div className="border border-paper-200 overflow-x-auto">
               <table className="w-full min-w-[520px]">
                 <thead>
@@ -243,6 +266,7 @@ export default function DispatchesPage() {
                     <th className="th text-right">Rate</th>
                     <th className="th text-right">Value</th>
                     <th className="th">By</th>
+                    <th className="th">Status</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -261,6 +285,15 @@ export default function DispatchesPage() {
                       <td className="px-2 py-1.5 text-right tnum text-[12.5px]">{inr(r.rate)}</td>
                       <td className="px-2 py-1.5 text-right tnum text-[12.5px] font-medium">{inr(r.value)}</td>
                       <td className="px-2 py-1.5 text-[11.5px] text-ink-500">{r.createdBy?.name ?? "—"}</td>
+                      <td className="px-2 py-1.5">
+                        {r.deliveryStatus === "requested" ? (
+                          <Chip tone="amber">Requested</Chip>
+                        ) : r.deliveryStatus === "in_transit" ? (
+                          <Chip tone="blue">In transit</Chip>
+                        ) : (
+                          <Chip tone="green">Delivered</Chip>
+                        )}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -269,6 +302,21 @@ export default function DispatchesPage() {
                 <span className="font-semibold text-ink-900 tnum">Total {inr(selectedDay.total)}</span>
               </div>
             </div>
+
+            {selectedDay.rows.some((r) => r.deliveryStatus === "requested") && (
+              <div className="flex justify-end border-t border-paper-200 pt-3">
+                <Button
+                  size="sm"
+                  onClick={() => sendRequested(selectedDay.rows.filter((r) => r.deliveryStatus === "requested").map((r) => r._id))}
+                  disabled={sending}
+                >
+                  <Send className="h-3.5 w-3.5" />
+                  {sending
+                    ? "Dispatching…"
+                    : `Dispatch ${selectedDay.rows.filter((r) => r.deliveryStatus === "requested").length} requested`}
+                </Button>
+              </div>
+            )}
 
             {selectedDay.rows.some((r) => r.note) && (
               <div className="border-t border-paper-200 pt-3 space-y-1.5">
@@ -282,14 +330,6 @@ export default function DispatchesPage() {
                   ))}
               </div>
             )}
-
-            {selectedDay.project && (
-              <div className="flex justify-end border-t border-paper-200 pt-3">
-                <Button size="sm" onClick={() => openDispatch(selectedDay.project!._id, selectedDay.project!.name)}>
-                  <Plus className="h-3.5 w-3.5" /> Dispatch
-                </Button>
-              </div>
-            )}
           </div>
         )}
       </Modal>
@@ -297,8 +337,6 @@ export default function DispatchesPage() {
       <NewDispatchModal
         open={dispatching}
         onClose={() => setDispatching(false)}
-        initialProjectId={dispatchDefaultProject}
-        lockedProjectName={dispatchLockedName}
         onDispatched={() => {
           setLoading(true);
           load();
