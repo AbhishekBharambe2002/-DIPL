@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { Material } from "../server/models/material";
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/firesafe";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://abhishekautowhat11_db_user:KaV0OyXkYQRqvsG5@cluster0.j4m8qrf.mongodb.net/";
 
 async function run() {
   const file = process.argv[2] ?? path.join(__dirname, "../data/materials-all.json");

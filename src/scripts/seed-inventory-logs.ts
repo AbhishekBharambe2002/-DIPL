@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { Material } from "../server/models/material";
 import { InventoryLog } from "../server/models/inventory-log";
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/firesafe";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://abhishekautowhat11_db_user:KaV0OyXkYQRqvsG5@cluster0.j4m8qrf.mongodb.net/";
 
 /**
  * Category → prefix map for generating unique product IDs.
